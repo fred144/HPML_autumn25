@@ -47,7 +47,7 @@ int main(int argc, char **argv)
     for (int r = 0; r < Reps; r++)
     {
         double t0 = now_sec();
-        dot_product = dpunroll(N, A, B);
+        dot_product = bdp(N, A, B);
         double t1 = now_sec();
         times[r] = t1 - t0;
         // printf("%f\n", dot_product);
