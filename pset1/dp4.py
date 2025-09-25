@@ -7,7 +7,7 @@ from scipy.stats import hmean
 def dp(N, A, B):
     R = 0.0
     for j in range(N):
-        R += float(A[j]) * float(B[j])
+        R += A[j] * B[j]
     return R
 
 if __name__ == "__main__":
@@ -15,17 +15,19 @@ if __name__ == "__main__":
         print("usage: python dp4.py N reps")
         sys.exit(1)
         
-    N = int(sys.argv[1]); reps = int(sys.argv[2])
-    A = np.ones(N, dtype=np.float32)
+    N = int(sys.argv[1]) 
+    reps = int(sys.argv[2])
+    A = np.ones(N, dtype=np.float32) # initialize to 1.0
     B = np.ones(N, dtype=np.float32)
     times = []
-    result = 0.0
+
     for r in range(reps):
         t0 = time.perf_counter()
         result = dp(N,A,B)
         t1 = time.perf_counter()
         times.append(t1-t0)
         print(f"run {r}: {times[-1]:.6f} sec result={result}")
+        
     start = reps // 2 # burn in
     times_used = times[start:]
     

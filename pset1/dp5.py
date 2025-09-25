@@ -9,11 +9,12 @@ if __name__ == "__main__":
         print("usage: python dp5.py N reps")
         sys.exit(1)
         
-    N = int(sys.argv[1]); reps = int(sys.argv[2])
+    N = int(sys.argv[1])
+    reps = int(sys.argv[2])
     A = np.ones(N, dtype=np.float32)
     B = np.ones(N, dtype=np.float32)
     times = []
-    result = 0.0
+
     for r in range(reps):
         t0 = time.perf_counter()
         result = np.dot(A,B)
