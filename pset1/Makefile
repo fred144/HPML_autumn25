@@ -1,7 +1,6 @@
 # Makefile for pset1
 CFLAGS = -O3 -Wall
 
-# Targets
 all: dp1 dp2 dp3
 
 dp1: dp1.c

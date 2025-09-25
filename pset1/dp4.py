@@ -1,4 +1,4 @@
-# copy the structure of the .c codes, using a simple dp
+# dp4.py - Python dot product benchmark (simple loop)
 import numpy as np
 import time
 import sys
@@ -12,32 +12,43 @@ def dp(N, A, B):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("usage: python dp4.py N reps")
+        print("Usage: python dp4.py N reps")
         sys.exit(1)
         
     N = int(sys.argv[1]) 
     reps = int(sys.argv[2])
-    A = np.ones(N, dtype=np.float32) # initialize to 1.0
+
+    # initialize arrays to 1.0
+    A = np.ones(N, dtype=np.float32)
     B = np.ones(N, dtype=np.float32)
+
     times = []
+    result = 0.0
 
     for r in range(reps):
         t0 = time.perf_counter()
-        result = dp(N,A,B)
+        result = dp(N, A, B)
         t1 = time.perf_counter()
-        times.append(t1-t0)
+        times.append(t1 - t0)
         print(f"run {r}: {times[-1]:.6f} sec result={result}")
-        
-    start = reps // 2 # burn in
-    times_used = times[start:]
-    
-    mean = sum(times_used) / len(times_used) #arithmetic mean
-    hmean_time = hmean(times_used) # harmonic mean
-    
-    bytes_ = N * 2 * 4
-    gb = bytes_ / (1024**3)
-    gbps = gb / hmean_time
-    
-    gflops = (2.0 * N) / hmean_time / 1e9
-    print(f"\nN: {N} <T>: {mean:.6f} sec B: {gbps:.6f} GB/sec F: {gflops:.6f} FLOP/sec ")
 
+    # discard first half as burn-in
+    start = reps // 2
+    times_used = times[start:]
+
+    # arithmetic mean of times
+    mean_time = sum(times_used) / len(times_used)
+
+    # harmonic mean of bandwidth and FLOP rate
+    bytes_ = N * 2 * 4  # 2 arrays, 4 bytes each (float32)
+    gb = bytes_ / (1024.0**3)  # GB per run
+
+    bw_values = [gb / t for t in times_used]
+    flops_values = [(2.0 * N) / t / 1e9 for t in times_used]
+
+    harm_bw = hmean(bw_values)
+    harm_flops = hmean(flops_values)
+
+    print(f"\nN: {N} <T>: {mean_time:.6f} sec "
+          f"B: {harm_bw:.6f} GB/sec "
+          f"F: {harm_flops:.6f} GFLOP/sec")
