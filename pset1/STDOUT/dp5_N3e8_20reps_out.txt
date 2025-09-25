@@ -1,0 +1,22 @@
+run 0: 0.200475 sec result=300000000.0
+run 1: 0.199510 sec result=300000000.0
+run 2: 0.198384 sec result=300000000.0
+run 3: 0.199236 sec result=300000000.0
+run 4: 0.199114 sec result=300000000.0
+run 5: 0.200170 sec result=300000000.0
+run 6: 0.199136 sec result=300000000.0
+run 7: 0.197712 sec result=300000000.0
+run 8: 0.199794 sec result=300000000.0
+run 9: 0.201130 sec result=300000000.0
+run 10: 0.201174 sec result=300000000.0
+run 11: 0.200374 sec result=300000000.0
+run 12: 0.196952 sec result=300000000.0
+run 13: 0.198522 sec result=300000000.0
+run 14: 0.201434 sec result=300000000.0
+run 15: 0.200734 sec result=300000000.0
+run 16: 0.198201 sec result=300000000.0
+run 17: 0.197085 sec result=300000000.0
+run 18: 0.194375 sec result=300000000.0
+run 19: 0.199121 sec result=300000000.0
+
+N: 300000000 <T>: 0.198797 sec B: 11.244791 GB/sec F: 3.018501 FLOP/sec 
