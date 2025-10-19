@@ -1,0 +1,78 @@
+_wandb:
+    value:
+        cli_version: 0.22.2
+        e:
+            x2pon34nrb7tbpo12xtxb9qq5cr1zejt:
+                codePath: pset2/hw2_fbg2107.ipynb
+                codePathLocal: hw2_fbg2107.ipynb
+                cpu_count: 64
+                cpu_count_logical: 64
+                cudaVersion: "12.4"
+                disk:
+                    /:
+                        total: "32196526080"
+                        used: "20217249792"
+                email: fgarcia4@terpmail.umd.edu
+                executable: /mnt/home/fgarcia/py_venves/hpml/bin/python
+                git:
+                    commit: a88e5b7e69b005b283f457bd06207ad55875d0d2
+                    remote: https://github.com/fred144/HPML_autumn25
+                gpu: NVIDIA A100-SXM4-80GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-ce53ecf9-304d-7b63-3f73-9d3212401935
+                host: workergpu037
+                memory:
+                    total: "1081861758976"
+                os: Linux-6.1.134.1.fi-x86_64-with-glibc2.28
+                program: /mnt/home/fgarcia/HPML_autumn25/pset2/hw2_fbg2107.ipynb
+                python: CPython 3.10.4
+                root: /mnt/home/fgarcia/HPML_autumn25/pset2
+                startedAt: "2025-10-19T05:20:42.612124Z"
+                writerId: x2pon34nrb7tbpo12xtxb9qq5cr1zejt
+        m: []
+        python_version: 3.10.4
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.10.4
+            "5": 0.22.2
+            "6": 4.57.1
+            "8":
+                - 1
+            "12": 0.22.2
+            "13": linux-x86_64
+batch_size:
+    value: 32
+component:
+    value: C1_baseline
+epochs:
+    value: 5
+lr:
+    value: 0.0001
+max_len:
+    value: 256
+model_name:
+    value: distilbert-base-uncased
+num_workers:
+    value: 2
+optimizer:
+    value: AdamW

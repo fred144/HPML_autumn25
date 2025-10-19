@@ -1,0 +1,51 @@
+measuring: (a) data-loading time, (b) training compute time, (c) total epoch time
+epoch 1/5
+Timing Epoch 1: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+   timing check: Data+Compute=124.69s, Total=127.50s, Diff=2.82s
+Testing Epoch 1: 100%|██████████| 782/782 [00:42<00:00, 18.23it/s]
+epoch 1 Complete
+	 (a) data loading: 0.12s
+	 (b) compute time: 124.57s
+	 (c) total epoch:  127.50s
+	 (d) test eval:        42.92s
+   metrics - loss: 0.0317, train acc: 0.9888, test acc: 0.8702
+epoch 2/5
+Timing Epoch 2: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+   timing check: Data+Compute=124.67s, Total=127.44s, Diff=2.77s
+Testing Epoch 2: 100%|██████████| 782/782 [00:42<00:00, 18.24it/s]
+epoch 2 Complete
+	 (a) data loading: 0.11s
+	 (b) compute time: 124.56s
+	 (c) total epoch:  127.44s
+	 (d) test eval:        42.91s
+   metrics - loss: 0.0293, train acc: 0.9905, test acc: 0.8640
+epoch 3/5
+Timing Epoch 3: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+   timing check: Data+Compute=124.70s, Total=127.46s, Diff=2.76s
+Testing Epoch 3: 100%|██████████| 782/782 [00:42<00:00, 18.22it/s]
+epoch 3 Complete
+	 (a) data loading: 0.11s
+	 (b) compute time: 124.59s
+	 (c) total epoch:  127.46s
+	 (d) test eval:        42.95s
+   metrics - loss: 0.0308, train acc: 0.9905, test acc: 0.8469
+epoch 4/5
+Timing Epoch 4: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+   timing check: Data+Compute=124.67s, Total=127.46s, Diff=2.79s
+Testing Epoch 4: 100%|██████████| 782/782 [00:42<00:00, 18.24it/s]
+epoch 4 Complete
+	 (a) data loading: 0.11s
+	 (b) compute time: 124.55s
+	 (c) total epoch:  127.46s
+	 (d) test eval:        42.90s
+   metrics - loss: 0.0215, train acc: 0.9936, test acc: 0.8498
+epoch 5/5
+Timing Epoch 5: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+   timing check: Data+Compute=124.67s, Total=127.40s, Diff=2.73s
+Testing Epoch 5: 100%|██████████| 782/782 [00:42<00:00, 18.24it/s]
+epoch 5 Complete
+	 (a) data loading: 0.11s
+	 (b) compute time: 124.55s
+	 (c) total epoch:  127.40s
+	 (d) test eval:        42.90s
+   metrics - loss: 0.0191, train acc: 0.9942, test acc: 0.8467

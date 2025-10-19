@@ -1,0 +1,12 @@
+{"time":"2025-10-19T12:40:28.686123695-04:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-19T12:40:28.870889856-04:00","level":"INFO","msg":"stream: created new stream","id":"sh8iv2e0"}
+{"time":"2025-10-19T12:40:28.871113371-04:00","level":"INFO","msg":"handler: started","stream_id":"sh8iv2e0"}
+{"time":"2025-10-19T12:40:28.875350212-04:00","level":"INFO","msg":"stream: started","id":"sh8iv2e0"}
+{"time":"2025-10-19T12:40:28.875588556-04:00","level":"INFO","msg":"writer: started","stream_id":"sh8iv2e0"}
+{"time":"2025-10-19T12:40:28.875634397-04:00","level":"INFO","msg":"sender: started","stream_id":"sh8iv2e0"}
+{"time":"2025-10-19T12:54:48.10547128-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-sh8iv2e0-C2_Table_T1","runtime_seconds":0.448785449,"subtasks":[{"desc":"C2_Table_T1.table.json","runtime_seconds":0.072330145,"progress":"837B/837B"}]},{"desc":"updating run metadata","runtime_seconds":0.22477842}],"total_operations":2}}
+{"time":"2025-10-19T12:54:48.638854112-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-19T12:54:48.751124695-04:00","level":"INFO","msg":"stream: closing","id":"sh8iv2e0"}
+{"time":"2025-10-19T12:54:48.751152826-04:00","level":"INFO","msg":"handler: closed","stream_id":"sh8iv2e0"}
+{"time":"2025-10-19T12:54:48.75475051-04:00","level":"INFO","msg":"sender: closed","stream_id":"sh8iv2e0"}
+{"time":"2025-10-19T12:54:48.754782106-04:00","level":"INFO","msg":"stream: closed","id":"sh8iv2e0"}

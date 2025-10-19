@@ -1,0 +1,13 @@
+measuring: (a) data-loading time, (b) training compute time, (c) total epoch time
+epoch 1/5
+Timing Epoch 1: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+   timing check: Data+Compute=124.66s, Total=127.54s, Diff=2.88s
+Testing Epoch 1: 100%|██████████| 782/782 [00:42<00:00, 18.22it/s]
+epoch 1 Complete
+   (a) data Loading: 0.12s
+   (b) compute Time: 124.54s
+   (c) total Epoch:  127.54s
+   test eval:        42.96s
+   metrics - loss: 0.0344, train acc: 0.9886, test acc: 0.8573
+epoch 2/5
+Timing Epoch 2:  82%|████████▏ | 642/782 [01:44<00:22,  6.12it/s]
