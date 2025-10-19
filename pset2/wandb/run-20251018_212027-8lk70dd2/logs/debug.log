@@ -1,0 +1,213 @@
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_setup.py:_flush():81] Current SDK version is 0.22.2
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_setup.py:_flush():81] Configure stats pid to 2313135
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_setup.py:_flush():81] Loading settings from /mnt/home/fgarcia/.config/wandb/settings
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_setup.py:_flush():81] Loading settings from /mnt/home/fgarcia/HPML_autumn25/pset2/wandb/settings
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_init.py:setup_run_log_directory():705] Logging user logs to /mnt/home/fgarcia/HPML_autumn25/pset2/wandb/run-20251018_212027-8lk70dd2/logs/debug.log
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to /mnt/home/fgarcia/HPML_autumn25/pset2/wandb/run-20251018_212027-8lk70dd2/logs/debug-internal.log
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_init.py:monkeypatch_ipython():624] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x155418e30340>
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_init.py:init():832] calling init triggers
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-10-18 21:20:27,810 INFO    MainThread:2313135 [wandb_init.py:init():880] starting backend
+2025-10-18 21:20:28,061 INFO    MainThread:2313135 [wandb_init.py:init():883] sending inform_init request
+2025-10-18 21:20:28,069 INFO    MainThread:2313135 [wandb_init.py:init():891] backend started and connected
+2025-10-18 21:20:28,070 INFO    MainThread:2313135 [wandb_run.py:_label_probe_notebook():1330] probe notebook
+2025-10-18 21:20:28,070 INFO    MainThread:2313135 [wandb_init.py:init():961] updated telemetry
+2025-10-18 21:20:28,077 INFO    MainThread:2313135 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-18 21:20:28,494 INFO    MainThread:2313135 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-18 21:20:28,653 INFO    MainThread:2313135 [wandb_run.py:_console_start():2509] atexit reg
+2025-10-18 21:20:28,653 INFO    MainThread:2313135 [wandb_run.py:_redirect():2357] redirect: wrap_raw
+2025-10-18 21:20:28,653 INFO    MainThread:2313135 [wandb_run.py:_redirect():2426] Wrapping output streams.
+2025-10-18 21:20:28,653 INFO    MainThread:2313135 [wandb_run.py:_redirect():2449] Redirects installed.
+2025-10-18 21:20:28,659 INFO    MainThread:2313135 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-18 21:20:28,660 INFO    MainThread:2313135 [wandb_run.py:_config_callback():1392] config_cb None None {'model_name': 'distilbert-base-uncased', 'max_len': 256, 'batch_size': 32, 'lr': 0.0001, 'optimizer': 'AdamW', 'num_workers': 2, 'epochs': 5, 'compile_mode': False}
+2025-10-18 21:20:28,660 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:20:32,244 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:20:32,244 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:20:32,247 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:30:25,754 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:30:25,754 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:30:25,758 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:30:29,881 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:30:29,881 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:30:35,347 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:31:30,123 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:31:30,124 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:31:30,127 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:31:34,165 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:31:34,165 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:31:34,186 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:33:08,486 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:33:08,486 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:33:12,133 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:33:38,399 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:33:38,400 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:33:38,405 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:33:41,465 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:33:41,465 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:33:41,480 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:34:36,856 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:34:36,856 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:34:39,809 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:35:12,947 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:35:12,947 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:35:12,950 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:36:10,253 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:36:10,253 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:36:10,256 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:37:24,387 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:37:24,387 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:37:24,390 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:37:41,376 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:37:41,376 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:37:41,382 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:38:43,368 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:38:43,368 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:38:43,371 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:38:59,154 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:38:59,154 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:38:59,157 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:39:01,671 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:39:01,671 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:39:01,674 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:39:03,521 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:39:03,521 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:39:03,526 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:39:13,528 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:39:13,528 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:39:13,532 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:39:19,006 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:39:19,006 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:39:19,008 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:39:19,032 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:39:19,032 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:39:19,038 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:39:19,194 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:39:19,194 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:39:19,198 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 21:39:19,205 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 21:39:19,205 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 21:39:19,207 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 22:56:41,856 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 22:56:41,857 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 22:56:43,630 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 22:58:01,330 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 22:58:01,330 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 22:58:01,331 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 23:03:28,580 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 23:03:28,580 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 23:03:28,790 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 23:03:41,946 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 23:03:41,948 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 23:03:41,950 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 23:04:26,591 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 23:04:26,592 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 23:04:26,597 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 23:04:29,323 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 23:04:29,323 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 23:04:29,327 INFO    MainThread:2313135 [wandb_init.py:_post_run_cell_hook():594] [no run ID] resuming backend
+2025-10-18 23:06:20,860 INFO    MainThread:2313135 [jupyter.py:save_ipynb():404] [no run ID] not saving jupyter notebook
+2025-10-18 23:06:20,860 INFO    MainThread:2313135 [wandb_init.py:_pre_run_cell_hook():583] [no run ID] pausing backend
+2025-10-18 23:13:18,260 INFO    wandb-AsyncioManager-main:2313135 [service_client.py:_forward_responses():80] Reached EOF.
+2025-10-18 23:13:18,260 INFO    wandb-AsyncioManager-main:2313135 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-10-18 23:13:18,265 ERROR   MainThread:2313135 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3324, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3695, in _map_single
+    writer.write_batch(batch, try_original_type=try_original_type)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_writer.py", line 697, in write_batch
+    arrays.append(pa.array(typed_sequence))
+  File "pyarrow/array.pxi", line 256, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 118, in pyarrow.lib._handle_arrow_array_protocol
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_writer.py", line 308, in __arrow_array__
+    out = pa.array(cast_to_python_objects(data, only_1d_for_numpy=True))
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2436, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 136, in run
+    return future.result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 219, in _wrap
+    return await fn()
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/streams.py", line 372, in drain
+    await self._protocol._drain_helper()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/streams.py", line 171, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-10-18 23:13:18,300 ERROR   MainThread:2313135 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3324, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3695, in _map_single
+    writer.write_batch(batch, try_original_type=try_original_type)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_writer.py", line 697, in write_batch
+    arrays.append(pa.array(typed_sequence))
+  File "pyarrow/array.pxi", line 256, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 118, in pyarrow.lib._handle_arrow_array_protocol
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/datasets/arrow_writer.py", line 308, in __arrow_array__
+    out = pa.array(cast_to_python_objects(data, only_1d_for_numpy=True))
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2436, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 136, in run
+    return future.result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 219, in _wrap
+    return await fn()
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/streams.py", line 360, in drain
+    raise exc
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/selector_events.py", line 915, in write
+    n = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
