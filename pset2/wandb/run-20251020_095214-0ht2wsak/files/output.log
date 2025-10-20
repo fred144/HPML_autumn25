@@ -1,0 +1,27 @@
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Epoch 1/5 - Optimizer=SGD
+Optimizer=SGD: 100%|██████████| 782/782 [02:07<00:00,  6.12it/s]
+   Time: Data=0.13s, Compute=122.28s, Total=127.88s
+   Loss: 0.6903, Train Acc: 0.5265, Test Acc: 0.6192
+Epoch 2/5 - Optimizer=SGD
+Optimizer=SGD: 100%|██████████| 782/782 [02:08<00:00,  6.10it/s]
+   Time: Data=0.12s, Compute=122.39s, Total=128.25s
+   Loss: 0.6853, Train Acc: 0.5745, Test Acc: 0.6858
+Epoch 3/5 - Optimizer=SGD
+Optimizer=SGD: 100%|██████████| 782/782 [02:08<00:00,  6.10it/s]
+   Time: Data=0.12s, Compute=122.37s, Total=128.25s
+   Loss: 0.6803, Train Acc: 0.6161, Test Acc: 0.7381
+Epoch 4/5 - Optimizer=SGD
+Optimizer=SGD: 100%|██████████| 782/782 [02:08<00:00,  6.10it/s]
+   Time: Data=0.12s, Compute=122.43s, Total=128.22s
+   Loss: 0.6711, Train Acc: 0.6684, Test Acc: 0.7766
+Epoch 5/5 - Optimizer=SGD
+Optimizer=SGD: 100%|██████████| 782/782 [02:08<00:00,  6.10it/s]
+   Time: Data=0.12s, Compute=122.40s, Total=128.17s
+   Loss: 0.6544, Train Acc: 0.7315, Test Acc: 0.8091
+Optimizer=SGD Summary:
+Avg Epoch Time: 128.15s
+Final Train Loss: 0.6544
+Final Train Accuracy: 0.7315
+Final Test Accuracy: 0.8091

@@ -1,0 +1,27 @@
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Epoch 1/5 - bs=16, lr=0.0001
+bs=16, lr=0.0001: 100%|██████████| 1563/1563 [02:16<00:00, 11.48it/s]
+   Time: Data=0.23s, Compute=128.25s, Total=136.20s
+   Loss: 0.3402, Train Acc: 0.8542, Test Acc: 0.8852
+Epoch 2/5 - bs=16, lr=0.0001
+bs=16, lr=0.0001: 100%|██████████| 1563/1563 [02:16<00:00, 11.46it/s]
+   Time: Data=0.23s, Compute=128.31s, Total=136.40s
+   Loss: 0.1975, Train Acc: 0.9263, Test Acc: 0.8532
+Epoch 3/5 - bs=16, lr=0.0001
+bs=16, lr=0.0001: 100%|██████████| 1563/1563 [02:16<00:00, 11.47it/s]
+   Time: Data=0.23s, Compute=128.24s, Total=136.24s
+   Loss: 0.1241, Train Acc: 0.9565, Test Acc: 0.8480
+Epoch 4/5 - bs=16, lr=0.0001
+bs=16, lr=0.0001: 100%|██████████| 1563/1563 [02:16<00:00, 11.47it/s]
+   Time: Data=0.24s, Compute=128.21s, Total=136.29s
+   Loss: 0.0759, Train Acc: 0.9763, Test Acc: 0.8435
+Epoch 5/5 - bs=16, lr=0.0001
+bs=16, lr=0.0001: 100%|██████████| 1563/1563 [02:16<00:00, 11.45it/s]
+   Time: Data=0.24s, Compute=128.17s, Total=136.50s
+   Loss: 0.1157, Train Acc: 0.9596, Test Acc: 0.8222
+num_workers=4 Summary:
+avg Epoch Time: 136.33s
+final Train Loss: 0.1157
+avg Data Loading: 0.24s (0.2%)
+final Test Accuracy: 0.8222

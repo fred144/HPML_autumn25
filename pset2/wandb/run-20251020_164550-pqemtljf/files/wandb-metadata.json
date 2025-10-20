@@ -1,0 +1,40 @@
+{
+  "os": "Linux-6.1.134.1.fi-x86_64-with-glibc2.28",
+  "python": "CPython 3.10.4",
+  "startedAt": "2025-10-20T20:45:50.759783Z",
+  "program": "/mnt/home/fgarcia/HPML_autumn25/pset2/hw2_fbg2107.ipynb",
+  "codePath": "pset2/hw2_fbg2107.ipynb",
+  "codePathLocal": "hw2_fbg2107.ipynb",
+  "git": {
+    "remote": "https://github.com/fred144/HPML_autumn25",
+    "commit": "95b51c0d50469bcc9a0f320aa9efee256bef4084"
+  },
+  "email": "fgarcia4@terpmail.umd.edu",
+  "root": "/mnt/home/fgarcia/HPML_autumn25/pset2",
+  "host": "workergpu037",
+  "executable": "/mnt/home/fgarcia/py_venves/hpml/bin/python",
+  "cpu_count": 64,
+  "cpu_count_logical": 64,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "32196526080",
+      "used": "20217249792"
+    }
+  },
+  "memory": {
+    "total": "1081861758976"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-ce53ecf9-304d-7b63-3f73-9d3212401935"
+    }
+  ],
+  "cudaVersion": "12.4",
+  "writerId": "umaxpiddacwrh2vh4hhs2rqrapuwxm98"
+}

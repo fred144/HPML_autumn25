@@ -1,0 +1,5 @@
+2025-10-20 11:12:35,741 INFO    MainThread:2534559 [wandb_init.py:setup_run_log_directory():705] Logging user logs to /mnt/home/fgarcia/HPML_autumn25/pset2/wandb/run-20251020_111235-dbk572h1/logs/debug.log
+2025-10-20 11:12:35,741 INFO    MainThread:2534559 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to /mnt/home/fgarcia/HPML_autumn25/pset2/wandb/run-20251020_111235-dbk572h1/logs/debug-internal.log
+2025-10-20 11:12:35,741 INFO    MainThread:2534559 [wandb_init.py:init():832] calling init triggers
+2025-10-20 11:12:35,741 INFO    MainThread:2534559 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'model_name': 'distilbert-base-uncased', 'sequence_length': 256, 'batch_size': 32, 'learning_rate': 0.0001, 'optimizer': 'AdamW', 'number_dataloader_workers': 4, 'epochs': 5, 'device': 'cuda', 'torch_compile_enabled': False, 'component': 'C5_cpu_vs_gpu', '_wandb': {}}

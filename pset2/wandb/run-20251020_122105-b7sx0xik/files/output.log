@@ -1,0 +1,88 @@
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Epoch 1/10 - Mode=compile
+Mode=compile:   0%|          | 0/782 [00:00<?, ?it/s]/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/torch/backends/cuda/__init__.py:131: UserWarning: Please use the new API settings to control TF32 behavior, such as torch.backends.cudnn.conv.fp32_precision = 'tf32' or torch.backends.cuda.matmul.fp32_precision = 'ieee'. Old settings, e.g, torch.backends.cuda.matmul.allow_tf32 = True, torch.backends.cudnn.allow_tf32 = True, allowTF32CuDNN() and allowTF32CuBLAS() will be deprecated after Pytorch 2.9. Please see https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:80.)
+  return torch._C._get_cublas_allow_tf32()
+/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:312: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/torch/_inductor/lowering.py:7242: UserWarning:
+Online softmax is disabled on the fly since Inductor decides to
+split the reduction. Cut an issue to PyTorch if this is an
+important use case and you want to speed it up with online
+softmax.
+
+  warnings.warn(
+/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/torch/_inductor/lowering.py:7242: UserWarning:
+Online softmax is disabled on the fly since Inductor decides to
+split the reduction. Cut an issue to PyTorch if this is an
+important use case and you want to speed it up with online
+softmax.
+
+  warnings.warn(
+Mode=compile: 100%|█████████▉| 781/782 [02:30<00:00,  6.21it/s]W1020 12:23:41.159651 2945576 torch/fx/experimental/symbolic_shapes.py:6833] [0/2] _maybe_guard_rel() was called on non-relation expression Eq(s43, 1) | Eq(s72, s43)
+/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/torch/_inductor/lowering.py:7242: UserWarning:
+Online softmax is disabled on the fly since Inductor decides to
+split the reduction. Cut an issue to PyTorch if this is an
+important use case and you want to speed it up with online
+softmax.
+
+  warnings.warn(
+Mode=compile: 100%|██████████| 782/782 [02:56<00:00,  4.42it/s]
+W1020 12:24:07.365314 2945576 torch/fx/experimental/symbolic_shapes.py:6833] [0/3] _maybe_guard_rel() was called on non-relation expression Eq(s43, 1) | Eq(s72, s43)
+/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/torch/_inductor/lowering.py:7242: UserWarning:
+Online softmax is disabled on the fly since Inductor decides to
+split the reduction. Cut an issue to PyTorch if this is an
+important use case and you want to speed it up with online
+softmax.
+
+  warnings.warn(
+   Time: 176.88s
+   Loss: 0.3070, Train Acc: 0.8683, Test Acc: 0.8842
+Epoch 2/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.18it/s]
+   Time: 126.54s
+   Loss: 0.1710, Train Acc: 0.9365, Test Acc: 0.8890
+Epoch 3/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.18it/s]
+   Time: 126.57s
+   Loss: 0.0866, Train Acc: 0.9704, Test Acc: 0.8834
+Epoch 4/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.18it/s]
+   Time: 126.56s
+   Loss: 0.0566, Train Acc: 0.9804, Test Acc: 0.8706
+Epoch 5/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.72s
+   Loss: 0.0432, Train Acc: 0.9856, Test Acc: 0.8742
+Epoch 6/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.70s
+   Loss: 0.0347, Train Acc: 0.9891, Test Acc: 0.8625
+Epoch 7/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.74s
+   Loss: 0.0239, Train Acc: 0.9923, Test Acc: 0.8595
+Epoch 8/10 - Mode=compile
+Mode=compile: 100%|█████████▉| 781/782 [02:06<00:00,  6.17it/s]W1020 12:43:54.496203 2945576 torch/fx/experimental/symbolic_shapes.py:6833] [0/4] _maybe_guard_rel() was called on non-relation expression Eq(s43, 1) | Eq(s72, s43)
+W1020 12:43:54.501113 2945576 torch/fx/experimental/symbolic_shapes.py:6833] [0/4] _maybe_guard_rel() was called on non-relation expression Eq(s53, 1) | Eq(s70, s53)
+/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/torch/_inductor/lowering.py:7242: UserWarning:
+Online softmax is disabled on the fly since Inductor decides to
+split the reduction. Cut an issue to PyTorch if this is an
+important use case and you want to speed it up with online
+softmax.
+
+  warnings.warn(
+Mode=compile: 100%|██████████| 782/782 [02:27<00:00,  5.31it/s]
+   Time: 147.28s
+   Loss: 0.0297, Train Acc: 0.9905, Test Acc: 0.8534
+Epoch 9/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.18it/s]
+   Time: 126.67s
+   Loss: 0.0216, Train Acc: 0.9935, Test Acc: 0.8322
+Epoch 10/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.85s
+   Loss: 0.0225, Train Acc: 0.9932, Test Acc: 0.8447
+Mode=compile Summary:
+First Epoch Time: 176.88s
+Avg Epoch Time (6-10): 130.85s

@@ -1,0 +1,3 @@
+[]
+train batches: 782, test batches: 782
+sample batch - input_ids: torch.Size([32, 256]), attention_mask: torch.Size([32, 256])

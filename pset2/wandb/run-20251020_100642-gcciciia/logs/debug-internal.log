@@ -1,0 +1,12 @@
+{"time":"2025-10-20T10:06:42.155074902-04:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-20T10:06:42.315612519-04:00","level":"INFO","msg":"stream: created new stream","id":"gcciciia"}
+{"time":"2025-10-20T10:06:42.315645705-04:00","level":"INFO","msg":"handler: started","stream_id":"gcciciia"}
+{"time":"2025-10-20T10:06:42.316286858-04:00","level":"INFO","msg":"stream: started","id":"gcciciia"}
+{"time":"2025-10-20T10:06:42.316434952-04:00","level":"INFO","msg":"sender: started","stream_id":"gcciciia"}
+{"time":"2025-10-20T10:06:42.316437696-04:00","level":"INFO","msg":"writer: started","stream_id":"gcciciia"}
+{"time":"2025-10-20T10:21:19.195614819-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run metadata","runtime_seconds":0.003895144}],"total_operations":1}}
+{"time":"2025-10-20T10:21:19.556101632-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-20T10:21:19.678757743-04:00","level":"INFO","msg":"stream: closing","id":"gcciciia"}
+{"time":"2025-10-20T10:21:19.678780131-04:00","level":"INFO","msg":"handler: closed","stream_id":"gcciciia"}
+{"time":"2025-10-20T10:21:19.679306802-04:00","level":"INFO","msg":"sender: closed","stream_id":"gcciciia"}
+{"time":"2025-10-20T10:21:19.679326846-04:00","level":"INFO","msg":"stream: closed","id":"gcciciia"}

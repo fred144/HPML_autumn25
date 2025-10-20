@@ -1,0 +1,45 @@
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Epoch 1/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.82s
+   Loss: 0.3011, Train Acc: 0.8717, Test Acc: 0.8999
+Epoch 2/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.88s
+   Loss: 0.1657, Train Acc: 0.9395, Test Acc: 0.8800
+Epoch 3/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.16it/s]
+   Time: 126.93s
+   Loss: 0.0909, Train Acc: 0.9682, Test Acc: 0.8872
+Epoch 4/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.86s
+   Loss: 0.0591, Train Acc: 0.9799, Test Acc: 0.8757
+Epoch 5/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.80s
+   Loss: 0.0437, Train Acc: 0.9855, Test Acc: 0.8700
+Epoch 6/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.72s
+   Loss: 0.0306, Train Acc: 0.9902, Test Acc: 0.8609
+Epoch 7/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.16it/s]
+   Time: 127.02s
+   Loss: 0.0290, Train Acc: 0.9901, Test Acc: 0.8668
+Epoch 8/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.16it/s]
+   Time: 126.89s
+   Loss: 0.0321, Train Acc: 0.9889, Test Acc: 0.8549
+Epoch 9/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.87s
+   Loss: 0.0281, Train Acc: 0.9912, Test Acc: 0.8429
+Epoch 10/10 - Mode=compile
+Mode=compile: 100%|██████████| 782/782 [02:06<00:00,  6.17it/s]
+   Time: 126.88s
+   Loss: 0.0331, Train Acc: 0.9897, Test Acc: 0.8503
+Mode=compile Summary:
+First Epoch Time: 126.82s
+Avg Epoch Time (6-10): 126.88s

@@ -1,0 +1,26 @@
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Epoch 1/5 - Device=cuda
+Device=cuda: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+Time: 127.66s
+Loss: 0.3004, Train Acc: 0.8746, Test Acc: 0.8963
+Epoch 2/5 - Device=cuda
+Device=cuda: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+Time: 127.65s
+Loss: 0.1666, Train Acc: 0.9376, Test Acc: 0.8980
+Epoch 3/5 - Device=cuda
+Device=cuda: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+Time: 127.53s
+Loss: 0.0886, Train Acc: 0.9686, Test Acc: 0.8867
+Epoch 4/5 - Device=cuda
+Device=cuda: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+Time: 127.68s
+Loss: 0.0577, Train Acc: 0.9794, Test Acc: 0.8773
+Epoch 5/5 - Device=cuda
+Device=cuda: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+Time: 127.65s
+Loss: 0.0358, Train Acc: 0.9882, Test Acc: 0.8536
+Device=cuda Summary:
+Avg Epoch Time: 127.64s
+Final Train Loss: 0.0358
+Final Test Accuracy: 0.8536

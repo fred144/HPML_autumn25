@@ -1,0 +1,2 @@
+Device,Avg Epoch Time (s),Final Train Loss,Final Test Acc
+CUDA,127.64,0.0358,0.8536
