@@ -1,0 +1,12 @@
+{"time":"2025-10-19T21:06:14.119364268-04:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-19T21:06:14.283816087-04:00","level":"INFO","msg":"stream: created new stream","id":"xnppbmy4"}
+{"time":"2025-10-19T21:06:14.284028084-04:00","level":"INFO","msg":"handler: started","stream_id":"xnppbmy4"}
+{"time":"2025-10-19T21:06:14.284745915-04:00","level":"INFO","msg":"stream: started","id":"xnppbmy4"}
+{"time":"2025-10-19T21:06:14.284915545-04:00","level":"INFO","msg":"writer: started","stream_id":"xnppbmy4"}
+{"time":"2025-10-19T21:06:14.284949191-04:00","level":"INFO","msg":"sender: started","stream_id":"xnppbmy4"}
+{"time":"2025-10-19T21:14:23.417912916-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run metadata","runtime_seconds":0.004170421}],"total_operations":1}}
+{"time":"2025-10-19T21:14:23.767263181-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-19T21:14:23.894057895-04:00","level":"INFO","msg":"stream: closing","id":"xnppbmy4"}
+{"time":"2025-10-19T21:14:23.894092034-04:00","level":"INFO","msg":"handler: closed","stream_id":"xnppbmy4"}
+{"time":"2025-10-19T21:14:23.894496679-04:00","level":"INFO","msg":"sender: closed","stream_id":"xnppbmy4"}
+{"time":"2025-10-19T21:14:23.894523507-04:00","level":"INFO","msg":"stream: closed","id":"xnppbmy4"}

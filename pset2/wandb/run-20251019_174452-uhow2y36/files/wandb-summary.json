@@ -1,0 +1,1 @@
+{"profiler/optimizer_pct":1.5108775038537616,"profiler/num_workers":4,"profiler/total_time_s":32.49741059400051,"profiler/backward_pct":2.2495648134364847,"profiler/forward_pct":0.06596174159223582,"profiler/other_pct":95.01346342252968,"_timestamp":1.7609103991906338e+09,"_step":0,"_wandb":{"runtime":106},"_runtime":106,"profiler/data_loading_pct":1.1601325185878137}

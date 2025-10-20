@@ -1,0 +1,27 @@
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Epoch 1/5 - workers=4
+workers=4: 100%|██████████| 782/782 [02:07<00:00,  6.12it/s]
+   Time: Data=0.13s, Compute=124.60s, Total=127.88s
+   Loss: 0.3027, Train Acc: 0.8712, Test Acc: 0.9013
+Epoch 2/5 - workers=4
+workers=4: 100%|██████████| 782/782 [02:07<00:00,  6.12it/s]
+   Time: Data=0.12s, Compute=124.88s, Total=127.87s
+   Loss: 0.1678, Train Acc: 0.9386, Test Acc: 0.9008
+Epoch 3/5 - workers=4
+workers=4: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+   Time: Data=0.12s, Compute=124.66s, Total=127.55s
+   Loss: 0.0827, Train Acc: 0.9719, Test Acc: 0.8866
+Epoch 4/5 - workers=4
+workers=4: 100%|██████████| 782/782 [02:08<00:00,  6.10it/s]
+   Time: Data=0.14s, Compute=124.73s, Total=128.31s
+   Loss: 0.0520, Train Acc: 0.9827, Test Acc: 0.8814
+Epoch 5/5 - workers=4
+workers=4: 100%|██████████| 782/782 [02:08<00:00,  6.10it/s]
+   Time: Data=0.14s, Compute=124.68s, Total=128.16s
+   Loss: 0.0391, Train Acc: 0.9877, Test Acc: 0.8752
+num_workers=4 Summary:
+avg Epoch Time: 127.95s
+final Train Loss: 0.0391
+avg Data Loading: 0.13s (0.1%)
+final Test Accuracy: 0.8752

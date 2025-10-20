@@ -11,4 +11,318 @@ training: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
 Testing: 100%|██████████| 782/782 [00:43<00:00, 18.18it/s]
 train Loss: 0.0870, train Acc: 0.9703, test Acc: 0.8848
 epoch 4/5
-training:  41%|████      | 322/782 [00:52<01:15,  6.13it/s]
+training: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+Testing: 100%|██████████| 782/782 [00:42<00:00, 18.22it/s]
+train Loss: 0.0567, train Acc: 0.9811, test Acc: 0.8770
+epoch 5/5
+training: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+Testing: 100%|██████████| 782/782 [00:42<00:00, 18.22it/s]
+train Loss: 0.0383, train Acc: 0.9872, test Acc: 0.8729
+Exception in thread Thread-14 (bg_main):
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2528642/4268796892.py", line 17, in bg_main
+Exception in thread   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+Thread-15 (bg_main):
+Traceback (most recent call last):
+    update_display(obj, display_id=self.display_id, **kwargs)  File "/tmp/ipykernel_2528642/1760535979.py", line 17, in bg_main
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+    display(obj, display_id=display_id, **kwargs)
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+update_display(obj, display_id=self.display_id, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+    publish_display_data(data=obj, metadata=metadata, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+    display(obj, display_id=display_id, **kwargs)
+display_pub.publish(  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+Exception in thread publish_display_data(data=obj, metadata=metadata, **kwargs)    Thread-16 (bg_main)
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs):
+Exception in thread   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+
+Traceback (most recent call last):
+Thread-17 (bg_main)    Exception in thread   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+  File "/tmp/ipykernel_2528642/817440737.py", line 17, in bg_main
+:
+display_pub.publish(
+    Thread-18 (bg_main)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header):
+Exception in thread       File "/tmp/ipykernel_2528642/4237402565.py", line 17, in bg_main
+
+Traceback (most recent call last):
+    Thread-19 (bg_main)Exception in thread update_display(obj, display_id=self.display_id, **kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+  File "/tmp/ipykernel_2528642/3149968493.py", line 17, in bg_main
+    ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs):
+Thread-20 (bg_main)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+return self._parent_header.get()  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+
+Traceback (most recent call last):
+:
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+
+          File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+  File "/tmp/ipykernel_2528642/3563044743.py", line 17, in bg_main
+Traceback (most recent call last):
+LookupErrorupdate_display(obj, display_id=self.display_id, **kwargs)    update_display(obj, display_id=self.display_id, **kwargs)  File "/tmp/ipykernel_2528642/1791938053.py", line 17, in bg_main
+    :   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+
+display(obj, display_id=display_id, **kwargs)
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)<ContextVar name='parent_header' at 0x155548fe8590>  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+    update_display(obj, display_id=self.display_id, **kwargs)      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+
+display(obj, display_id=display_id, **kwargs)display(obj, display_id=display_id, **kwargs)    return self._parent_header.get()    publish_display_data(data=obj, metadata=metadata, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+update_display(obj, display_id=self.display_id, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+
+    publish_display_data(data=obj, metadata=metadata, **kwargs)
+self.run()
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 788, in run_closure
+display_pub.publish(display(obj, display_id=display_id, **kwargs)LookupError: display(obj, display_id=display_id, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+    _threading_Thread_run(self)<ContextVar name='parent_header' at 0x155548fe8590>
+display_pub.publish(
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+Traceback (most recent call last):
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+publish_display_data(data=obj, metadata=metadata, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+      File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 946, in run
+
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+    self.run()      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)    publish_display_data(data=obj, metadata=metadata, **kwargs)
+publish_display_data(data=obj, metadata=metadata, **kwargs)
+self._target(*self._args, **self._kwargs)
+display_pub.publish(  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 788, in run_closure
+
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+
+      File "/tmp/ipykernel_2528642/4268796892.py", line 19, in bg_main
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+_threading_Thread_run(self)        display_pub.publish(
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+
+    display_pub.publish(  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+return self._parent_header.get()
+    update_display(obj, display_id=self.display_id, **kwargs)
+
+    return self._parent_header.get()LookupError  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 946, in run
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+
+LookupError    self._target(*self._args, **self._kwargs)
+display(obj, display_id=display_id, **kwargs)
+:     ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)
+  File "/tmp/ipykernel_2528642/1760535979.py", line 19, in bg_main
+:   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+<ContextVar name='parent_header' at 0x155548fe8590>
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+<ContextVar name='parent_header' at 0x155548fe8590>
+
+During handling of the above exception, another exception occurred:
+
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+publish_display_data(data=obj, metadata=metadata, **kwargs)    Traceback (most recent call last):
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+update_display(obj, display_id=self.display_id, **kwargs)
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+
+
+
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)    self.run()
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 788, in run_closure
+display(obj, display_id=display_id, **kwargs)return self._parent_header.get()display_pub.publish(self.run()    return self._parent_header.get()
+
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+_threading_Thread_run(self)
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 946, in run
+
+    LookupError    LookupError
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs): publish_display_data(data=obj, metadata=metadata, **kwargs):   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 788, in run_closure
+self._target(*self._args, **self._kwargs)
+    <ContextVar name='parent_header' at 0x155548fe8590>
+<ContextVar name='parent_header' at 0x155548fe8590>
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+return self._parent_header.get()
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+
+  File "/tmp/ipykernel_2528642/4237402565.py", line 19, in bg_main
+
+_threading_Thread_run(self)
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+
+During handling of the above exception, another exception occurred:
+
+LookupError
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+:       File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 946, in run
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+    Traceback (most recent call last):
+<ContextVar name='parent_header' at 0x155548fe8590>    self.run()    update_display(obj, display_id=self.display_id, **kwargs)  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+
+return self._parent_header.get()
+self._target(*self._args, **self._kwargs)
+display_pub.publish(
+During handling of the above exception, another exception occurred:
+
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 788, in run_closure
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+
+self.run()Traceback (most recent call last):
+LookupError  File "/tmp/ipykernel_2528642/817440737.py", line 19, in bg_main
+    _threading_Thread_run(self)
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+:   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+display(obj, display_id=display_id, **kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 788, in run_closure
+<ContextVar name='parent_header' at 0x155548fe8590>      File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 946, in run
+
+
+self.run()          File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)update_display(obj, display_id=self.display_id, **kwargs)
+_threading_Thread_run(self)self._target(*self._args, **self._kwargs)
+
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 788, in run_closure
+
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+publish_display_data(data=obj, metadata=metadata, **kwargs)  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 946, in run
+      File "/tmp/ipykernel_2528642/3149968493.py", line 19, in bg_main
+
+        _threading_Thread_run(self)      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+display(obj, display_id=display_id, **kwargs)
+self._target(*self._args, **self._kwargs)
+
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/threading.py", line 946, in run
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+display_pub.publish(  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+update_display(obj, display_id=self.display_id, **kwargs)  File "/tmp/ipykernel_2528642/1791938053.py", line 19, in bg_main
+
+
+    self._target(*self._args, **self._kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+return self._parent_header.get()  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+publish_display_data(data=obj, metadata=metadata, **kwargs)
+
+
+          File "/tmp/ipykernel_2528642/3563044743.py", line 19, in bg_main
+LookupErrorupdate_display(obj, display_id=self.display_id, **kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)display(obj, display_id=display_id, **kwargs):   File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 374, in update
+
+
+
+    <ContextVar name='parent_header' at 0x155548fe8590>  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+display_pub.publish(
+update_display(obj, display_id=self.display_id, **kwargs)
+
+display(obj, display_id=display_id, **kwargs)      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 326, in update_display
+
+publish_display_data(data=obj, metadata=metadata, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)    display(obj, display_id=display_id, **kwargs)
+
+    publish_display_data(data=obj, metadata=metadata, **kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 296, in display
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+return self._parent_header.get()
+
+          File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+publish_display_data(data=obj, metadata=metadata, **kwargs)LookupErrormsg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)display_pub.publish(
+:
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/IPython/core/display_functions.py", line 93, in publish_display_data
+<ContextVar name='parent_header' at 0x155548fe8590>display_pub.publish(  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+
+
+    display_pub.publish(      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+return self._parent_header.get()
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 635, in publish
+
+LookupErroripython.display_pub._orig_publish(data, metadata=metadata, **kwargs)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+:
+    <ContextVar name='parent_header' at 0x155548fe8590>      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+ipython.display_pub._orig_publish(data, metadata=metadata, **kwargs)
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)
+
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 135, in publish
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+
+      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+msg = self.session.msg(msg_type, json_clean(content), parent=self.parent_header)
+return self._parent_header.get()      File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/ipykernel/zmqshell.py", line 69, in parent_header
+
+return self._parent_header.get()LookupError
+: return self._parent_header.get()LookupError<ContextVar name='parent_header' at 0x155548fe8590>
+:
+LookupError<ContextVar name='parent_header' at 0x155548fe8590>:
+<ContextVar name='parent_header' at 0x155548fe8590>

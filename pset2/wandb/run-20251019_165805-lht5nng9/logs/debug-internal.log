@@ -1,0 +1,12 @@
+{"time":"2025-10-19T16:58:05.885510838-04:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-19T16:58:06.073508469-04:00","level":"INFO","msg":"stream: created new stream","id":"lht5nng9"}
+{"time":"2025-10-19T16:58:06.073545454-04:00","level":"INFO","msg":"handler: started","stream_id":"lht5nng9"}
+{"time":"2025-10-19T16:58:06.074250392-04:00","level":"INFO","msg":"stream: started","id":"lht5nng9"}
+{"time":"2025-10-19T16:58:06.074399569-04:00","level":"INFO","msg":"writer: started","stream_id":"lht5nng9"}
+{"time":"2025-10-19T16:58:06.074434067-04:00","level":"INFO","msg":"sender: started","stream_id":"lht5nng9"}
+{"time":"2025-10-19T17:00:39.033783762-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-lht5nng9-top_ops_cpu_num_workers_1","runtime_seconds":0.138836231},{"desc":"updating run metadata","runtime_seconds":0.003042073}],"total_operations":2}}
+{"time":"2025-10-19T17:00:39.761777878-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-19T17:00:39.882367762-04:00","level":"INFO","msg":"stream: closing","id":"lht5nng9"}
+{"time":"2025-10-19T17:00:39.88240003-04:00","level":"INFO","msg":"handler: closed","stream_id":"lht5nng9"}
+{"time":"2025-10-19T17:00:39.889442176-04:00","level":"INFO","msg":"sender: closed","stream_id":"lht5nng9"}
+{"time":"2025-10-19T17:00:39.889474086-04:00","level":"INFO","msg":"stream: closed","id":"lht5nng9"}

@@ -1,0 +1,31 @@
+Epoch 1/5
+Timing Epoch 1: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+   Timing check: Data+Compute=124.61s, Total=127.40s, Diff=2.79s
+Testing Epoch 1: 100%|██████████| 782/782 [00:42<00:00, 18.21it/s]
+Epoch 1 Complete
+   (a) Data Loading: 0.11s
+   (b) Compute Time: 124.49s
+   (c) Total Epoch:  127.40s
+   Test Accuracy:    0.8604
+Epoch 2/5
+Timing Epoch 2: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+   Timing check: Data+Compute=124.75s, Total=127.46s, Diff=2.72s
+Testing Epoch 2: 100%|██████████| 782/782 [00:42<00:00, 18.23it/s]
+Epoch 2 Complete
+   (a) Data Loading: 0.11s
+   (b) Compute Time: 124.63s
+   (c) Total Epoch:  127.46s
+   Test Accuracy:    0.8585
+Epoch 3/5
+Timing Epoch 3: 100%|██████████| 782/782 [02:07<00:00,  6.14it/s]
+   Timing check: Data+Compute=124.63s, Total=127.37s, Diff=2.74s
+Testing Epoch 3: 100%|██████████| 782/782 [00:42<00:00, 18.22it/s]
+Epoch 3 Complete
+   (a) Data Loading: 0.11s
+   (b) Compute Time: 124.52s
+   (c) Total Epoch:  127.37s
+   Test Accuracy:    0.8528
+Epoch 4/5
+Timing Epoch 4: 100%|██████████| 782/782 [02:07<00:00,  6.13it/s]
+   Timing check: Data+Compute=124.75s, Total=127.50s, Diff=2.75s
+Testing Epoch 4:  39%|███▉      | 307/782 [00:16<00:25, 18.29it/s]

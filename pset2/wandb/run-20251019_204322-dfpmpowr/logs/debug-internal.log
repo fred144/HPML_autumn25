@@ -1,0 +1,12 @@
+{"time":"2025-10-19T20:43:22.701440589-04:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-19T20:43:22.896846385-04:00","level":"INFO","msg":"stream: created new stream","id":"dfpmpowr"}
+{"time":"2025-10-19T20:43:22.897019312-04:00","level":"INFO","msg":"handler: started","stream_id":"dfpmpowr"}
+{"time":"2025-10-19T20:43:22.899485051-04:00","level":"INFO","msg":"stream: started","id":"dfpmpowr"}
+{"time":"2025-10-19T20:43:22.899584767-04:00","level":"INFO","msg":"writer: started","stream_id":"dfpmpowr"}
+{"time":"2025-10-19T20:43:22.899618556-04:00","level":"INFO","msg":"sender: started","stream_id":"dfpmpowr"}
+{"time":"2025-10-19T20:45:20.067202644-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run metadata","runtime_seconds":0.004527138}],"total_operations":1}}
+{"time":"2025-10-19T20:45:20.419424712-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-19T20:45:20.543723757-04:00","level":"INFO","msg":"stream: closing","id":"dfpmpowr"}
+{"time":"2025-10-19T20:45:20.543750674-04:00","level":"INFO","msg":"handler: closed","stream_id":"dfpmpowr"}
+{"time":"2025-10-19T20:45:20.546645186-04:00","level":"INFO","msg":"sender: closed","stream_id":"dfpmpowr"}
+{"time":"2025-10-19T20:45:20.546668212-04:00","level":"INFO","msg":"stream: closed","id":"dfpmpowr"}

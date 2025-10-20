@@ -1,0 +1,12 @@
+{"time":"2025-10-19T17:33:50.470989569-04:00","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2025-10-19T17:33:50.755704192-04:00","level":"INFO","msg":"stream: created new stream","id":"trmiufti"}
+{"time":"2025-10-19T17:33:50.755838573-04:00","level":"INFO","msg":"handler: started","stream_id":"trmiufti"}
+{"time":"2025-10-19T17:33:50.758161365-04:00","level":"INFO","msg":"stream: started","id":"trmiufti"}
+{"time":"2025-10-19T17:33:50.758276657-04:00","level":"INFO","msg":"writer: started","stream_id":"trmiufti"}
+{"time":"2025-10-19T17:33:50.758321998-04:00","level":"INFO","msg":"sender: started","stream_id":"trmiufti"}
+{"time":"2025-10-19T17:36:14.02797053-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-trmiufti-top_ops_cpu_num_workers_1","runtime_seconds":0.141203006},{"desc":"updating run metadata","runtime_seconds":0.003705884}],"total_operations":2}}
+{"time":"2025-10-19T17:36:14.696767669-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-19T17:36:14.797522773-04:00","level":"INFO","msg":"stream: closing","id":"trmiufti"}
+{"time":"2025-10-19T17:36:14.79754462-04:00","level":"INFO","msg":"handler: closed","stream_id":"trmiufti"}
+{"time":"2025-10-19T17:36:14.79901797-04:00","level":"INFO","msg":"sender: closed","stream_id":"trmiufti"}
+{"time":"2025-10-19T17:36:14.79903946-04:00","level":"INFO","msg":"stream: closed","id":"trmiufti"}

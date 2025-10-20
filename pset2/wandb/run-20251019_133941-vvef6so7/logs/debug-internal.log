@@ -4,3 +4,9 @@
 {"time":"2025-10-19T13:39:42.261343648-04:00","level":"INFO","msg":"stream: started","id":"vvef6so7"}
 {"time":"2025-10-19T13:39:42.261471614-04:00","level":"INFO","msg":"writer: started","stream_id":"vvef6so7"}
 {"time":"2025-10-19T13:39:42.261515383-04:00","level":"INFO","msg":"sender: started","stream_id":"vvef6so7"}
+{"time":"2025-10-19T13:53:57.203610983-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-vvef6so7-C2_Table_T1","runtime_seconds":0.444038122},{"desc":"updating run metadata","runtime_seconds":0.19065467}],"total_operations":2}}
+{"time":"2025-10-19T13:53:57.652175392-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-19T13:53:57.776584894-04:00","level":"INFO","msg":"stream: closing","id":"vvef6so7"}
+{"time":"2025-10-19T13:53:57.776789342-04:00","level":"INFO","msg":"handler: closed","stream_id":"vvef6so7"}
+{"time":"2025-10-19T13:53:57.777524251-04:00","level":"INFO","msg":"sender: closed","stream_id":"vvef6so7"}
+{"time":"2025-10-19T13:53:57.777550207-04:00","level":"INFO","msg":"stream: closed","id":"vvef6so7"}

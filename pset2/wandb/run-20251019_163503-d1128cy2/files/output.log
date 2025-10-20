@@ -1,0 +1,16 @@
+--- Profiling with num_workers=1 (200 batches) ---
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight', 'pre_classifier.bias', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+starting PyTorch Profiler (200 batches - representative slice)...
+Profiled 200 batches for num_workers=1
+Processing profiler results...
+
+Time Breakdown (num_workers=1):
+Operation       CPU Time (ms) Percentage
+---------------------------------------------
+Data Loading    411.01       1.3         %
+Forward         22.97        0.1         %
+Backward        754.78       2.3         %
+Optimizer       342.17       1.0         %
+Other           31098.86     95.3        %
+Total           32629.80     100.0       %

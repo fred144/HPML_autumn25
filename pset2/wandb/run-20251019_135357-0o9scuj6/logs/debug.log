@@ -1,0 +1,108 @@
+2025-10-19 13:53:57,805 INFO    MainThread:2528642 [wandb_init.py:setup_run_log_directory():705] Logging user logs to /mnt/home/fgarcia/HPML_autumn25/pset2/wandb/run-20251019_135357-0o9scuj6/logs/debug.log
+2025-10-19 13:53:57,805 INFO    MainThread:2528642 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to /mnt/home/fgarcia/HPML_autumn25/pset2/wandb/run-20251019_135357-0o9scuj6/logs/debug-internal.log
+2025-10-19 13:53:57,805 INFO    MainThread:2528642 [wandb_init.py:monkeypatch_ipython():624] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x1553ac06b130>
+2025-10-19 13:53:57,805 INFO    MainThread:2528642 [wandb_init.py:init():832] calling init triggers
+2025-10-19 13:53:57,805 INFO    MainThread:2528642 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'model_name': 'distilbert-base-uncased', 'sequence_length': 256, 'batch_size': 32, 'learning_rate': 0.0001, 'optimizer': 'AdamW', 'number_dataloader_workers': 2, 'epochs': 5, 'device': 'cuda', 'torch_compile_enabled': False, '_wandb': {}}
+2025-10-19 13:53:57,805 INFO    MainThread:2528642 [wandb_init.py:init():880] starting backend
+2025-10-19 13:53:57,805 INFO    MainThread:2528642 [wandb_init.py:init():883] sending inform_init request
+2025-10-19 13:53:57,806 INFO    MainThread:2528642 [wandb_init.py:init():891] backend started and connected
+2025-10-19 13:53:57,807 INFO    MainThread:2528642 [wandb_run.py:_label_probe_notebook():1330] probe notebook
+2025-10-19 13:53:57,808 INFO    MainThread:2528642 [wandb_init.py:init():961] updated telemetry
+2025-10-19 13:53:57,819 INFO    MainThread:2528642 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-19 13:53:58,132 INFO    MainThread:2528642 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-19 13:53:58,268 INFO    MainThread:2528642 [wandb_run.py:_console_start():2509] atexit reg
+2025-10-19 13:53:58,268 INFO    MainThread:2528642 [wandb_run.py:_redirect():2357] redirect: wrap_raw
+2025-10-19 13:53:58,268 INFO    MainThread:2528642 [wandb_run.py:_redirect():2426] Wrapping output streams.
+2025-10-19 13:53:58,268 INFO    MainThread:2528642 [wandb_run.py:_redirect():2449] Redirects installed.
+2025-10-19 13:53:58,269 INFO    MainThread:2528642 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-19 14:04:53,859 ERROR   MainThread:2528642 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    yield obj
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2436, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 136, in run
+    return future.result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 219, in _wrap
+    return await fn()
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/streams.py", line 372, in drain
+    await self._protocol._drain_helper()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/streams.py", line 171, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-10-19 14:04:53,874 ERROR   QueueFeederThread:2528642 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/multiprocessing/queues.py", line 251, in _feed
+    send_bytes(obj)
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/multiprocessing/connection.py", line 205, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/multiprocessing/connection.py", line 416, in _send_bytes
+    self._send(header + buf)
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/multiprocessing/connection.py", line 373, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2436, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 136, in run
+    return future.result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 219, in _wrap
+    return await fn()
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/mnt/home/fgarcia/py_venves/hpml/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/streams.py", line 360, in drain
+    raise exc
+  File "/mnt/sw/nix/store/963ciri6rlr0ixw4ikqib5vdsnf24vb4-python-3.10.4-view/lib/python3.10/asyncio/selector_events.py", line 915, in write
+    n = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
