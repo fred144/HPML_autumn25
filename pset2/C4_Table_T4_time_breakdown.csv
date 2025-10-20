@@ -1,0 +1,3 @@
+Config,Data Loading %,Forward %,Backward %,Optimizer %,Other %,Total Time (s)
+nw=1,1.1%,0.1%,2.3%,1.5%,95.1%,32.5
+nw=best,1.2%,0.1%,2.2%,1.5%,95.0%,32.5
