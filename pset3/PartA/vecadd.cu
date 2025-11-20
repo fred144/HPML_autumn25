@@ -126,8 +126,11 @@ int main(int argc, char** argv)
     double nGBytesPerSec = nBytesPerSec*1e-9;
 
 	// Report timing data.
-    printf( "Time: %lf (sec), GFlopsS: %lf, GBytesS: %lf\n", 
-             time, nGFlopsPerSec, nGBytesPerSec);
+    // printf("> Time(sec): %lf \t GFlopsS: %lf \t GBytesS: %lf \t ValuesPerThread: %d\n",
+    //     time, nGFlopsPerSec, nGBytesPerSec, ValuesPerThread);
+
+    printf("> Time(sec): \t GFlopsS:  \t GBytesS:  \t ValuesPerThread: \n");
+    printf("  %lf \t %lf \t %lf \t %d\n", time, nGFlopsPerSec, nGBytesPerSec, ValuesPerThread);
      
     // Copy result from device memory to host memory
     error = cudaMemcpy(h_C, d_C, size, cudaMemcpyDeviceToHost);

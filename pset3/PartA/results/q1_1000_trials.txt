@@ -1,0 +1,20 @@
+Total vector size: 7680000
+> Time(sec): 	 GFlopsS:  	 GBytesS:  	 ValuesPerThread: 
+  0.002307 	 3.328744 	 39.944927 	 1000
+Test PASSED 
+Total vector size: 7680000
+> Time(sec): 	 GFlopsS:  	 GBytesS:  	 ValuesPerThread: 
+  0.001827 	 4.203609 	 50.443306 	 1000
+Test PASSED 
+Total vector size: 7680000
+> Time(sec): 	 GFlopsS:  	 GBytesS:  	 ValuesPerThread: 
+  0.001794 	 4.280698 	 51.368380 	 1000
+Test PASSED 
+Total vector size: 7680000
+> Time(sec): 	 GFlopsS:  	 GBytesS:  	 ValuesPerThread: 
+  0.001719 	 4.467719 	 53.612629 	 1000
+Test PASSED 
+Total vector size: 7680000
+> Time(sec): 	 GFlopsS:  	 GBytesS:  	 ValuesPerThread: 
+  0.001862 	 4.124488 	 49.493861 	 1000
+Test PASSED 
