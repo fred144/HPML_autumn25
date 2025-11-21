@@ -1,0 +1,13 @@
+Q2 results for K=100 million, Scenario 1: One block with 1 thread (5 runs)
+==========================================
+Run 1/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Scenario 1 (1 block, 1 thread):
+N: 100000000 <T>: 0.000015020370 sec  <B>: 148809.523809523816 GB/sec  <F>: 6657.625396825397 GFLOP/sec
+Result verification: FAILED
+
+Run 2/5:
+
+Run 3/5:

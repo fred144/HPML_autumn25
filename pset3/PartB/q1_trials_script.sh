@@ -6,9 +6,7 @@ echo "================================================================"
 K_values=(1 5 10 50 100)
 N_RUNS=5
 
-make q1
-
-# Create results directory if it doesn't exist
+# create results directory if it doesn't exist
 mkdir -p results
 
 for K in "${K_values[@]}"; do

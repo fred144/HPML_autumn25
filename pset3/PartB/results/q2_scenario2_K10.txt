@@ -1,0 +1,42 @@
+Q2 results for K=10 million, Scenario 2: One block with 256 threads (5 runs)
+==========================================
+Run 1/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.000007152557 sec  <B>: 31250.000000000000 GB/sec  <F>: 1398.101333333333 GFLOP/sec
+Result verification: FAILED
+
+Run 2/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.000005960464 sec  <B>: 37500.000000000000 GB/sec  <F>: 1677.721600000000 GFLOP/sec
+Result verification: FAILED
+
+Run 3/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.000010967255 sec  <B>: 20380.434782608696 GB/sec  <F>: 911.805217391304 GFLOP/sec
+Result verification: FAILED
+
+Run 4/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.000010967255 sec  <B>: 20380.434782608696 GB/sec  <F>: 911.805217391304 GFLOP/sec
+Result verification: FAILED
+
+Run 5/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.000010967255 sec  <B>: 20380.434782608696 GB/sec  <F>: 911.805217391304 GFLOP/sec
+Result verification: FAILED
+
