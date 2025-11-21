@@ -184,7 +184,7 @@ The speedup ranges from approximately 1.47x to 1.92x, with the most significant 
 Nonetheless, the use of shared memory and loop unrolling in matmult01 leads to substantial performance improvements in matrix multiplication on the GPU, almost reaching double in some cases.
 
 
-#### Q5: Some good performance tips
+#### Q5: some performance suggestion
 - memomry coalescing    ensures adjacent threads are accesed
 - unrolling loops reduces the overhead of loop control and increases instruction-level parallelism
 - computing more per thread by increasing footprint size reduces the number of thread blocks and overhead associated with managing them
@@ -193,3 +193,5 @@ Nonetheless, the use of shared memory and loop unrolling in matmult01 leads to s
 ## Part-B: CUDA Unified Memory 
 
 Compare vector operations executed on host vs on GPU to quantify the speed-up.
+
+### Q1 

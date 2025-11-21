@@ -1,42 +1,45 @@
-Q2 results for K=50 million, Scenario 1: One block with 1 thread (5 runs)
-==========================================
-Run 1/5:
+run 1/5:
 Vector size: 50000000 elements (50 million)
 initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 50000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 50000000 <T>: 0.000029087067 sec  <B>: 38422.131147540982 GB/sec  <F>: 1718.977049180328 GFLOP/sec
-Result verification: FAILED
+N: 50000000 <T>: 5.921648025513 sec  <B>: 0.188729064058 GB/sec  <F>: 0.008443595395 GFLOP/sec
+Result verification: PASSED
 
-Run 2/5:
+run 2/5:
 Vector size: 50000000 elements (50 million)
 initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 50000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 50000000 <T>: 0.000006914139 sec  <B>: 161637.931034482754 GB/sec  <F>: 7231.558620689655 GFLOP/sec
-Result verification: FAILED
+N: 50000000 <T>: 5.922646045685 sec  <B>: 0.188697261480 GB/sec  <F>: 0.008442172572 GFLOP/sec
+Result verification: PASSED
 
-Run 3/5:
+run 3/5:
 Vector size: 50000000 elements (50 million)
 initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 50000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 50000000 <T>: 0.000018835068 sec  <B>: 59335.443037974685 GB/sec  <F>: 2654.622784810127 GFLOP/sec
-Result verification: FAILED
+N: 50000000 <T>: 5.924105167389 sec  <B>: 0.188650784880 GB/sec  <F>: 0.008440093244 GFLOP/sec
+Result verification: PASSED
 
-Run 4/5:
+run 4/5:
 Vector size: 50000000 elements (50 million)
 initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 50000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 50000000 <T>: 0.000010967255 sec  <B>: 101902.173913043473 GB/sec  <F>: 4559.026086956522 GFLOP/sec
-Result verification: FAILED
+N: 50000000 <T>: 5.922811031342 sec  <B>: 0.188692005135 GB/sec  <F>: 0.008441937407 GFLOP/sec
+Result verification: PASSED
 
-Run 5/5:
+run 5/5:
 Vector size: 50000000 elements (50 million)
 initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 50000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 50000000 <T>: 0.000005960464 sec  <B>: 187500.000000000000 GB/sec  <F>: 8388.608000000000 GFLOP/sec
-Result verification: FAILED
+N: 50000000 <T>: 5.917999982834 sec  <B>: 0.188845402633 GB/sec  <F>: 0.008448800295 GFLOP/sec
+Result verification: PASSED
 

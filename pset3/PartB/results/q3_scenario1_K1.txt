@@ -1,0 +1,45 @@
+run 1/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 1: 1 block, 1 thread)...
+launching kernel: 1 blocks, 1 threads, 1 total threads, 1000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 1000000 <T>: 0.184974908829 sec  <B>: 0.120836614719 GB/sec  <F>: 0.005406138629 GFLOP/sec
+Result verification: PASSED
+
+run 2/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 1: 1 block, 1 thread)...
+launching kernel: 1 blocks, 1 threads, 1 total threads, 1000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 1000000 <T>: 0.189026117325 sec  <B>: 0.118246843913 GB/sec  <F>: 0.005290274244 GFLOP/sec
+Result verification: PASSED
+
+run 3/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 1: 1 block, 1 thread)...
+launching kernel: 1 blocks, 1 threads, 1 total threads, 1000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 1000000 <T>: 0.187640190125 sec  <B>: 0.119120225661 GB/sec  <F>: 0.005329348682 GFLOP/sec
+Result verification: PASSED
+
+run 4/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 1: 1 block, 1 thread)...
+launching kernel: 1 blocks, 1 threads, 1 total threads, 1000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 1000000 <T>: 0.174724102020 sec  <B>: 0.127925921681 GB/sec  <F>: 0.005723308853 GFLOP/sec
+Result verification: PASSED
+
+run 5/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 1: 1 block, 1 thread)...
+launching kernel: 1 blocks, 1 threads, 1 total threads, 1000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 1000000 <T>: 0.187530040741 sec  <B>: 0.119190193222 GB/sec  <F>: 0.005332478978 GFLOP/sec
+Result verification: PASSED
+

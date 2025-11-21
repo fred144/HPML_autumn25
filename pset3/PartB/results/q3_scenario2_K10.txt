@@ -1,0 +1,45 @@
+run 1/5:
+vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 2: 1 block, 256 threads)...
+launching kernel: 1 blocks, 256 threads, 256 total threads, 39063 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.053930997849 sec  <B>: 4.144507367276 GB/sec  <F>: 0.185422120838 GFLOP/sec
+Result verification: PASSED
+
+run 2/5:
+vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 2: 1 block, 256 threads)...
+launching kernel: 1 blocks, 256 threads, 256 total threads, 39063 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.054129123688 sec  <B>: 4.129337456064 GB/sec  <F>: 0.184743430499 GFLOP/sec
+Result verification: PASSED
+
+run 3/5:
+vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 2: 1 block, 256 threads)...
+launching kernel: 1 blocks, 256 threads, 256 total threads, 39063 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.051735162735 sec  <B>: 4.320415865950 GB/sec  <F>: 0.193292133848 GFLOP/sec
+Result verification: PASSED
+
+run 4/5:
+vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 2: 1 block, 256 threads)...
+launching kernel: 1 blocks, 256 threads, 256 total threads, 39063 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.054373979568 sec  <B>: 4.110742301402 GB/sec  <F>: 0.183911497363 GFLOP/sec
+Result verification: PASSED
+
+run 5/5:
+vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 2: 1 block, 256 threads)...
+launching kernel: 1 blocks, 256 threads, 256 total threads, 39063 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 10000000 <T>: 0.051130056381 sec  <B>: 4.371546478282 GB/sec  <F>: 0.195579678720 GFLOP/sec
+Result verification: PASSED
+

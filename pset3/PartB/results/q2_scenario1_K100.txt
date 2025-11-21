@@ -1,13 +1,45 @@
-Q2 results for K=100 million, Scenario 1: One block with 1 thread (5 runs)
-==========================================
-Run 1/5:
+run 1/5:
 Vector size: 100000000 elements (100 million)
 initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 100000000 <T>: 0.000015020370 sec  <B>: 148809.523809523816 GB/sec  <F>: 6657.625396825397 GFLOP/sec
-Result verification: FAILED
+N: 100000000 <T>: 11.767706871033 sec  <B>: 0.189941354214 GB/sec  <F>: 0.008497832339 GFLOP/sec
+Result verification: PASSED
 
-Run 2/5:
+run 2/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 100000000 <T>: 11.757375955582 sec  <B>: 0.190108250984 GB/sec  <F>: 0.008505299174 GFLOP/sec
+Result verification: PASSED
 
-Run 3/5:
+run 3/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 100000000 <T>: 11.761826992035 sec  <B>: 0.190036308185 GB/sec  <F>: 0.008502080507 GFLOP/sec
+Result verification: PASSED
+
+run 4/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 100000000 <T>: 11.771250009537 sec  <B>: 0.189884181991 GB/sec  <F>: 0.008495274497 GFLOP/sec
+Result verification: PASSED
+
+run 5/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
+Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
+Scenario 1 (1 block, 1 thread):
+N: 100000000 <T>: 11.774832963943 sec  <B>: 0.189826402287 GB/sec  <F>: 0.008492689476 GFLOP/sec
+Result verification: PASSED
+

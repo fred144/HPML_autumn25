@@ -1,0 +1,45 @@
+run 1/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Launching kernel: 1 blocks, 256 threads, 256 total threads, 390625 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 100000000 <T>: 0.181334972382 sec  <B>: 12.326216778381 GB/sec  <F>: 0.551465603610 GFLOP/sec
+Result verification: PASSED
+
+run 2/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Launching kernel: 1 blocks, 256 threads, 256 total threads, 390625 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 100000000 <T>: 0.177649974823 sec  <B>: 12.581899779632 GB/sec  <F>: 0.562904667449 GFLOP/sec
+Result verification: PASSED
+
+run 3/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Launching kernel: 1 blocks, 256 threads, 256 total threads, 390625 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 100000000 <T>: 0.179520845413 sec  <B>: 12.450777924605 GB/sec  <F>: 0.557038374958 GFLOP/sec
+Result verification: PASSED
+
+run 4/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Launching kernel: 1 blocks, 256 threads, 256 total threads, 390625 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 100000000 <T>: 0.178976058960 sec  <B>: 12.488676932914 GB/sec  <F>: 0.558733947887 GFLOP/sec
+Result verification: PASSED
+
+run 5/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
+Launching kernel: 1 blocks, 256 threads, 256 total threads, 390625 elements per thread
+Scenario 2 (1 block, 256 threads):
+N: 100000000 <T>: 0.181164979935 sec  <B>: 12.337782831334 GB/sec  <F>: 0.551983060060 GFLOP/sec
+Result verification: PASSED
+

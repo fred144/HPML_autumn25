@@ -4,39 +4,34 @@ Run 1/5:
 Vector size: 100000000 elements (100 million)
 initializing vectors...
 performing vector addition...
-N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
-100000000 	 0.446078432011 	 2.505360065271 	 0.224175823855
+N: 100000000 <T>: 0.188893795013 sec  <B>: 5.916483860463 GB/sec  <F>: 0.529398014333 GFLOP/sec
 Result verification: PASSED
 
 Run 2/5:
 Vector size: 100000000 elements (100 million)
 initializing vectors...
 performing vector addition...
-N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
-100000000 	 0.320724792997 	 3.484567186391 	 0.311793793880
+N: 100000000 <T>: 0.180505990982 sec  <B>: 6.191412725186 GB/sec  <F>: 0.553998232723 GFLOP/sec
 Result verification: PASSED
 
 Run 3/5:
 Vector size: 100000000 elements (100 million)
 initializing vectors...
 performing vector addition...
-N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
-100000000 	 0.297941044002 	 3.751034347355 	 0.335636871835
+N: 100000000 <T>: 0.186900854111 sec  <B>: 5.979571869032 GB/sec  <F>: 0.535043033783 GFLOP/sec
 Result verification: PASSED
 
 Run 4/5:
 Vector size: 100000000 elements (100 million)
 initializing vectors...
 performing vector addition...
-N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
-100000000 	 0.293055287999 	 3.813570801503 	 0.341232539030
+N: 100000000 <T>: 0.182861089706 sec  <B>: 6.111672479546 GB/sec  <F>: 0.546863196323 GFLOP/sec
 Result verification: PASSED
 
 Run 5/5:
 Vector size: 100000000 elements (100 million)
 initializing vectors...
 performing vector addition...
-N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
-100000000 	 0.295783433001 	 3.778396505173 	 0.338085196272
+N: 100000000 <T>: 0.183428049088 sec  <B>: 6.092781856963 GB/sec  <F>: 0.545172892027 GFLOP/sec
 Result verification: PASSED
 

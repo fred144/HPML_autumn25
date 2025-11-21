@@ -1,4 +1,5 @@
-# Part-B: Vector addition on CPU and GPU
+# part-B: vector addition on CPU and GPU
+# makes doing the experiments a bit easiers
 CXX = g++
 NVCC = nvcc
 CXXFLAGS = -O2 -std=c++11
@@ -22,11 +23,11 @@ q3: q3.cu timer.cpp
 	$(NVCC) $(NVCCFLAGS) -o q3 q3.cu timer.cpp $(CUDA_LIBS)
 	chmod +x q3
 
-# Make scripts executable
+# make scripts executable
 scripts:
 	chmod +x *.sh
 
-# Clean all executables and object files
+# clean all executables and object files
 clean:
 	rm -f q1 q2 q3
 

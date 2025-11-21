@@ -1,0 +1,45 @@
+run 1/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 3: multiple blocks, 256 threads/block)...
+launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
+Scenario 3 (multiple blocks, 256 threads/block):
+N: 1000000 <T>: 0.004816055298 sec  <B>: 4.641089108911 GB/sec  <F>: 0.207638811881 GFLOP/sec
+Result verification: PASSED
+
+run 2/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 3: multiple blocks, 256 threads/block)...
+launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
+Scenario 3 (multiple blocks, 256 threads/block):
+N: 1000000 <T>: 0.005020141602 sec  <B>: 4.452412613982 GB/sec  <F>: 0.199197568389 GFLOP/sec
+Result verification: PASSED
+
+run 3/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 3: multiple blocks, 256 threads/block)...
+launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
+Scenario 3 (multiple blocks, 256 threads/block):
+N: 1000000 <T>: 0.005100965500 sec  <B>: 4.381864921711 GB/sec  <F>: 0.196041318065 GFLOP/sec
+Result verification: PASSED
+
+run 4/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 3: multiple blocks, 256 threads/block)...
+launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
+Scenario 3 (multiple blocks, 256 threads/block):
+N: 1000000 <T>: 0.005122900009 sec  <B>: 4.363103271746 GB/sec  <F>: 0.195201936054 GFLOP/sec
+Result verification: PASSED
+
+run 5/5:
+vector size: 1000000 elements (1 million)
+initializing vectors...
+performing vector addition on GPU with Unified Memory (Scenario 3: multiple blocks, 256 threads/block)...
+launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
+Scenario 3 (multiple blocks, 256 threads/block):
+N: 1000000 <T>: 0.004854917526 sec  <B>: 4.603938515936 GB/sec  <F>: 0.205976722487 GFLOP/sec
+Result verification: PASSED
+
