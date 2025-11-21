@@ -28,5 +28,5 @@ for vpt in $VALUES_PER_THREAD; do
 done
 
 echo "### all trials completed!"
-echo "running analysis..."
-# python3 analyze_trials_parta.py
+echo "running analysis... output saved to ./results/STDOUT_analysis_q1q2"
+python3 analyze_trials_P1_q1q2.py | tee -a ./results/STDOUT_analysis_q1q2

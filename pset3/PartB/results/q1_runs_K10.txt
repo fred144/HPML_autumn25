@@ -1,0 +1,42 @@
+Q1 results for K=10 million (5 runs)
+==========================================
+Run 1/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+10000000 	 0.030386175989 	 3.677945819600 	 0.329097021076
+Result verification: PASSED
+
+Run 2/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+10000000 	 0.030577387995 	 3.654946229238 	 0.327039052567
+Result verification: PASSED
+
+Run 3/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+10000000 	 0.030310886999 	 3.687081442263 	 0.329914462754
+Result verification: PASSED
+
+Run 4/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+10000000 	 0.030454221007 	 3.669728046183 	 0.328361707158
+Result verification: PASSED
+
+Run 5/5:
+Vector size: 10000000 elements (10 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+10000000 	 0.035666994998 	 3.133392901771 	 0.280371250805
+Result verification: PASSED
+

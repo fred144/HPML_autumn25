@@ -1,0 +1,40 @@
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000296 (sec), nFlops: 268435456, GFlopsS: 906.521664
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000422 (sec), nFlops: 268435456, GFlopsS: 636.101642
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000421 (sec), nFlops: 268435456, GFlopsS: 637.542416
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000269 (sec), nFlops: 268435456, GFlopsS: 998.138215
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000297 (sec), nFlops: 268435456, GFlopsS: 903.611482
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000218 (sec), nFlops: 268435456, GFlopsS: 1231.837972
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000239 (sec), nFlops: 268435456, GFlopsS: 1123.652602
+Data dimensions: 512x512 
+Grid Dimensions: 16x16 
+Block Dimensions: 16x16 
+Footprint Dimensions: 32x32 
+Time: 0.000420 (sec), nFlops: 268435456, GFlopsS: 638.989731

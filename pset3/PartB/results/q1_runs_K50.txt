@@ -1,0 +1,42 @@
+Q1 results for K=50 million (5 runs)
+==========================================
+Run 1/5:
+Vector size: 50000000 elements (50 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+50000000 	 0.162682331997 	 3.434875428150 	 0.307347450620
+Result verification: PASSED
+
+Run 2/5:
+Vector size: 50000000 elements (50 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+50000000 	 0.148415143994 	 3.765070933664 	 0.336892844317
+Result verification: PASSED
+
+Run 3/5:
+Vector size: 50000000 elements (50 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+50000000 	 0.147137840991 	 3.797755499223 	 0.339817409737
+Result verification: PASSED
+
+Run 4/5:
+Vector size: 50000000 elements (50 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+50000000 	 0.149207069000 	 3.745087605527 	 0.335104766383
+Result verification: PASSED
+
+Run 5/5:
+Vector size: 50000000 elements (50 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+50000000 	 0.146988777997 	 3.801606846352 	 0.340162022444
+Result verification: PASSED
+

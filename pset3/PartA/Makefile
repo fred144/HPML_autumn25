@@ -17,7 +17,7 @@ OPTIONS   :=  -O3
 #--maxrregcount=100 --ptxas-options -v 
 
 TAR_FILE_NAME  := fbg2107CUDA1.tar
-EXECS :=  vecadd00 vecadd01 #matmult00
+EXECS :=  vecadd00 vecadd01 matmult00 matmult01
 SCRIPTS := run_multiple_trials_and_save.sh
 
 all:$(EXECS)
@@ -26,8 +26,10 @@ all:$(EXECS)
 #######################################################################
 clean:
 	rm -f $(EXECS) *.o 
-	rm ./results/*.txt
 
+clear: # remove result files
+	rm ./results/*.txt
+	
 #######################################################################
 tar:
 	tar -cvf $(TAR_FILE_NAME) Makefile *.h *.cu *.pdf *.txt
@@ -63,15 +65,41 @@ scripts:
 
 
 #######################################################################
+# Q3: original matrix multiplication (provided)
+matmultKernel00.o : matmultKernel00.cu matmultKernel.h 
+	${NVCC} $< -c -o $@ $(OPTIONS)
 
-# matmultKernel00.o : matmultKernel00.cu matmultKernel.h 
-# 	${NVCC} $< -c -o $@ $(OPTIONS)
-
-# matmult00 : matmult.cu  matmultKernel.h matmultKernel00.o timer.o
-# 	${NVCC} $< matmultKernel00.o -o $@ $(LIB) timer.o $(OPTIONS)
+matmult00 : matmult.cu  matmultKernel.h matmultKernel00.o timer.o
+	${NVCC} $< matmultKernel00.o -o $@ $(LIB) timer.o $(OPTIONS)
 
 #######################################################################
-## Expanded Kernel, notice that FOOTPRINT_SIZE is redefined (from 16 to 32)
+
+# # Q4 improvement 1: 4 values per thread (FOOTPRINT_SIZE=32)
+# matmultKernel01_step1.o : matmultKernel01_step1.cu matmultKernel.h
+# 	${NVCC} $< -c -o $@ $(OPTIONS) -DFOOTPRINT_SIZE=32
+
+# matmult01_step1 : matmult.cu matmultKernel.h matmultKernel01_step1.o timer.o
+# 	${NVCC} $< matmultKernel01_step1.o -o $@ $(LIB) timer.o $(OPTIONS) -DFOOTPRINT_SIZE=32
+
+# # Q4 improvement 2: + Coalesced memory access
+# matmultKernel01_step2.o : matmultKernel01_step2.cu matmultKernel.h
+# 	${NVCC} $< -c -o $@ $(OPTIONS) -DFOOTPRINT_SIZE=32
+
+# matmult01_step2 : matmult.cu matmultKernel.h matmultKernel01_step2.o timer.o
+# 	${NVCC} $< matmultKernel01_step2.o -o $@ $(LIB) timer.o $(OPTIONS) -DFOOTPRINT_SIZE=32
+
+#######################################################################
+
+## expanded Kernel, notice that FOOTPRINT_SIZE is redefined (from 16 to 32)
+
+# Q4: (fully optimized)
+matmultKernel01.o : matmultKernel01.cu matmultKernel.h
+	${NVCC} $< -c -o $@ $(OPTIONS) -DFOOTPRINT_SIZE=32
+
+matmult01 : matmult.cu matmultKernel.h matmultKernel01.o timer.o
+	${NVCC} $< matmultKernel01.o -o $@ $(LIB) timer.o $(OPTIONS) -DFOOTPRINT_SIZE=32
+
+
 ### matmultKernel01.o : matmultKernel01.cu matmultKernel.h
 ###	${NVCC} $< -c -o $@ $(OPTIONS) -DFOOTPRINT_SIZE=32
 ###

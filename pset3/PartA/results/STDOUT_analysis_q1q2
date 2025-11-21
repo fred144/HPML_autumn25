@@ -1,0 +1,66 @@
+============================================================
+VECTOR ADDITION - MULTIPLE TRIALS ANALYSIS
+============================================================
+
+Q1 - vecadd00 (Non-coalesced Memory Access)
+--------------------------------------------------
+500 values/thread:
+  Trials: 5
+  Avg Time: 0.000815 sec
+  Min Time: 0.000796 sec
+  Max Time: 0.000829 sec
+  Std Dev:  0.000013 sec
+  Avg GFlops/S: 4.712858
+  Avg GBytes/S: 56.554295
+1000 values/thread:
+  Trials: 5
+  Avg Time: 0.004187 sec
+  Min Time: 0.001795 sec
+  Max Time: 0.012657 sec
+  Std Dev:  0.004742 sec
+  Avg GFlops/S: 3.141563
+  Avg GBytes/S: 37.698762
+2000 values/thread:
+  Trials: 5
+  Avg Time: 0.004246 sec
+  Min Time: 0.003024 sec
+  Max Time: 0.008118 sec
+  Std Dev:  0.002170 sec
+  Avg GFlops/S: 4.135380
+  Avg GBytes/S: 49.624565
+
+Q2 - vecadd01 (Coalesced Memory Access)
+--------------------------------------------------
+500 values/thread:
+  Trials: 5
+  Avg Time: 0.000356 sec
+  Min Time: 0.000312 sec
+  Max Time: 0.000410 sec
+  Std Dev:  0.000036 sec
+  Avg GFlops/S: 10.881106
+  Avg GBytes/S: 130.573276
+1000 values/thread:
+  Trials: 5
+  Avg Time: 0.000699 sec
+  Min Time: 0.000651 sec
+  Max Time: 0.000748 sec
+  Std Dev:  0.000044 sec
+  Avg GFlops/S: 11.022135
+  Avg GBytes/S: 132.265613
+2000 values/thread:
+  Trials: 5
+  Avg Time: 0.001448 sec
+  Min Time: 0.001283 sec
+  Max Time: 0.001505 sec
+  Std Dev:  0.000094 sec
+  Avg GFlops/S: 10.645869
+  Avg GBytes/S: 127.750435
+
+PERFORMANCE COMPARISON - Coalesced vs Non-coalesced
+------------------------------------------------------------
+Speedup = Non-coalesced Time / Coalesced Time
+(Higher speedup = better performance)
+------------------------------------------------------------
+ 500 values/thread: 2.29x speedup (++129.2%)
+1000 values/thread: 5.99x speedup (++499.1%)
+2000 values/thread: 2.93x speedup (++193.2%)

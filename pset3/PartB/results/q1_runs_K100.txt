@@ -1,0 +1,42 @@
+Q1 results for K=100 million (5 runs)
+==========================================
+Run 1/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+100000000 	 0.446078432011 	 2.505360065271 	 0.224175823855
+Result verification: PASSED
+
+Run 2/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+100000000 	 0.320724792997 	 3.484567186391 	 0.311793793880
+Result verification: PASSED
+
+Run 3/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+100000000 	 0.297941044002 	 3.751034347355 	 0.335636871835
+Result verification: PASSED
+
+Run 4/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+100000000 	 0.293055287999 	 3.813570801503 	 0.341232539030
+Result verification: PASSED
+
+Run 5/5:
+Vector size: 100000000 elements (100 million)
+initializing vectors...
+performing vector addition...
+N:	 T [sec] 	 [GB/sec] 	 [GFLOP/sec]
+100000000 	 0.295783433001 	 3.778396505173 	 0.338085196272
+Result verification: PASSED
+
