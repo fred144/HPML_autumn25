@@ -4,7 +4,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 19532 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 5000000 <T>: 0.013564109802 sec  <B>: 8.239295507277 GB/sec  <F>: 0.368619841102 GFLOP/sec
+N: 5000000 <T>: 0.013440132141 sec  <B>: 8.315298375080 GB/sec  <F>: 0.372020151848 GFLOP/sec
 Result verification: PASSED
 
 run 2/5:
@@ -13,7 +13,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 19532 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 5000000 <T>: 0.012485027313 sec  <B>: 8.951418859565 GB/sec  <F>: 0.400479700569 GFLOP/sec
+N: 5000000 <T>: 0.012480974197 sec  <B>: 8.954325775086 GB/sec  <F>: 0.400609753768 GFLOP/sec
 Result verification: PASSED
 
 run 3/5:
@@ -22,7 +22,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 19532 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 5000000 <T>: 0.011043071747 sec  <B>: 10.120255624163 GB/sec  <F>: 0.452772572218 GFLOP/sec
+N: 5000000 <T>: 0.011059999466 sec  <B>: 10.104766216129 GB/sec  <F>: 0.452079587833 GFLOP/sec
 Result verification: PASSED
 
 run 4/5:
@@ -31,7 +31,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 19532 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 5000000 <T>: 0.011050939560 sec  <B>: 10.113050419624 GB/sec  <F>: 0.452450216824 GFLOP/sec
+N: 5000000 <T>: 0.011053085327 sec  <B>: 10.111087144090 GB/sec  <F>: 0.452362381363 GFLOP/sec
 Result verification: PASSED
 
 run 5/5:
@@ -40,6 +40,6 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 19532 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 5000000 <T>: 0.011422157288 sec  <B>: 9.784378391918 GB/sec  <F>: 0.437745679219 GFLOP/sec
+N: 5000000 <T>: 0.011234045029 sec  <B>: 9.948216218511 GB/sec  <F>: 0.445075659500 GFLOP/sec
 Result verification: PASSED
 

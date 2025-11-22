@@ -4,7 +4,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 100000000 <T>: 11.767706871033 sec  <B>: 0.189941354214 GB/sec  <F>: 0.008497832339 GFLOP/sec
+N: 100000000 <T>: 11.781020164490 sec  <B>: 0.189726708542 GB/sec  <F>: 0.008488229254 GFLOP/sec
 Result verification: PASSED
 
 run 2/5:
@@ -13,7 +13,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 100000000 <T>: 11.757375955582 sec  <B>: 0.190108250984 GB/sec  <F>: 0.008505299174 GFLOP/sec
+N: 100000000 <T>: 11.782004117966 sec  <B>: 0.189710863848 GB/sec  <F>: 0.008487520374 GFLOP/sec
 Result verification: PASSED
 
 run 3/5:
@@ -22,7 +22,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 100000000 <T>: 11.761826992035 sec  <B>: 0.190036308185 GB/sec  <F>: 0.008502080507 GFLOP/sec
+N: 100000000 <T>: 11.779081106186 sec  <B>: 0.189757941127 GB/sec  <F>: 0.008489626576 GFLOP/sec
 Result verification: PASSED
 
 run 4/5:
@@ -31,7 +31,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 100000000 <T>: 11.771250009537 sec  <B>: 0.189884181991 GB/sec  <F>: 0.008495274497 GFLOP/sec
+N: 100000000 <T>: 11.789920091629 sec  <B>: 0.189583488413 GB/sec  <F>: 0.008481821694 GFLOP/sec
 Result verification: PASSED
 
 run 5/5:
@@ -40,6 +40,6 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 100000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 100000000 <T>: 11.774832963943 sec  <B>: 0.189826402287 GB/sec  <F>: 0.008492689476 GFLOP/sec
+N: 100000000 <T>: 11.775481939316 sec  <B>: 0.189815940494 GB/sec  <F>: 0.008492221424 GFLOP/sec
 Result verification: PASSED
 

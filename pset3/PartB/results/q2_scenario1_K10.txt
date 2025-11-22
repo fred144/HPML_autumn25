@@ -4,7 +4,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 10000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 10000000 <T>: 1.245862960815 sec  <B>: 0.179407707700 GB/sec  <F>: 0.008026564971 GFLOP/sec
+N: 10000000 <T>: 1.246900081635 sec  <B>: 0.179258483659 GB/sec  <F>: 0.008019888800 GFLOP/sec
 Result verification: PASSED
 
 run 2/5:
@@ -13,7 +13,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 10000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 10000000 <T>: 1.251076936722 sec  <B>: 0.178660009906 GB/sec  <F>: 0.007993113538 GFLOP/sec
+N: 10000000 <T>: 1.245629787445 sec  <B>: 0.179441291594 GB/sec  <F>: 0.008028067489 GFLOP/sec
 Result verification: PASSED
 
 run 3/5:
@@ -22,7 +22,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 10000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 10000000 <T>: 1.242870092392 sec  <B>: 0.179839726835 GB/sec  <F>: 0.008045893180 GFLOP/sec
+N: 10000000 <T>: 1.256042003632 sec  <B>: 0.177953776435 GB/sec  <F>: 0.007961517187 GFLOP/sec
 Result verification: PASSED
 
 run 4/5:
@@ -31,7 +31,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 10000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 10000000 <T>: 1.242769002914 sec  <B>: 0.179854355382 GB/sec  <F>: 0.008046547650 GFLOP/sec
+N: 10000000 <T>: 1.256393909454 sec  <B>: 0.177903933015 GB/sec  <F>: 0.007959287231 GFLOP/sec
 Result verification: PASSED
 
 run 5/5:
@@ -40,6 +40,6 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 10000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 10000000 <T>: 1.244484901428 sec  <B>: 0.179606371802 GB/sec  <F>: 0.008035453053 GFLOP/sec
+N: 10000000 <T>: 1.258394002914 sec  <B>: 0.177621172216 GB/sec  <F>: 0.007946636727 GFLOP/sec
 Result verification: PASSED
 

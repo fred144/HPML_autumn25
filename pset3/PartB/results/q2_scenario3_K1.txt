@@ -4,7 +4,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 3: multiple blocks, 256 threads/block)...
 Launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
 Scenario 3 (multiple blocks, 256 threads/block):
-N: 1000000 <T>: 0.000151157379 sec  <B>: 147.870662460568 GB/sec  <F>: 6.615621451104 GFLOP/sec
+N: 1000000 <T>: 0.000154018402 sec  <B>: 145.123839009288 GB/sec  <F>: 6.492730650155 GFLOP/sec
 Result verification: PASSED
 
 run 2/5:
@@ -13,7 +13,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 3: multiple blocks, 256 threads/block)...
 Launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
 Scenario 3 (multiple blocks, 256 threads/block):
-N: 1000000 <T>: 0.000152826309 sec  <B>: 146.255850234009 GB/sec  <F>: 6.543375975039 GFLOP/sec
+N: 1000000 <T>: 0.000144004822 sec  <B>: 155.215231788079 GB/sec  <F>: 6.944211920530 GFLOP/sec
 Result verification: PASSED
 
 run 3/5:
@@ -22,7 +22,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 3: multiple blocks, 256 threads/block)...
 Launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
 Scenario 3 (multiple blocks, 256 threads/block):
-N: 1000000 <T>: 0.000154972076 sec  <B>: 144.230769230769 GB/sec  <F>: 6.452775384615 GFLOP/sec
+N: 1000000 <T>: 0.000147819519 sec  <B>: 151.209677419355 GB/sec  <F>: 6.765006451613 GFLOP/sec
 Result verification: PASSED
 
 run 4/5:
@@ -31,7 +31,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 3: multiple blocks, 256 threads/block)...
 Launching kernel: 3907 blocks, 256 threads, 1000192 total threads, 1 elements per thread
 Scenario 3 (multiple blocks, 256 threads/block):
-N: 1000000 <T>: 0.000156164169 sec  <B>: 143.129770992366 GB/sec  <F>: 6.403517557252 GFLOP/sec
+N: 1000000 <T>: 0.000149965286 sec  <B>: 149.046104928458 GB/sec  <F>: 6.668209856916 GFLOP/sec
 Result verification: PASSED
 
 run 5/5:

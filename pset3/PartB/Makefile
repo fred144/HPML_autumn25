@@ -30,5 +30,3 @@ scripts:
 # clean all executables and object files
 clean:
 	rm -f q1 q2 q3
-
-.PHONY: all scripts clean

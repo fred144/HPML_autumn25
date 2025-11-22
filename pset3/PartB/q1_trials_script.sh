@@ -13,8 +13,8 @@ for K in "${K_values[@]}"; do
     OUTPUT_FILE="results/q1_runs_K${K}.txt"
     
     echo "----------------------------------------"
-    echo "Testing K = $K million ($N_RUNS runs)"
-    echo "Output: $OUTPUT_FILE"
+    echo "testing K = $K million ($N_RUNS runs)"
+    echo "output: $OUTPUT_FILE"
     echo "----------------------------------------"
     
     echo "Q1 results for K=$K million ($N_RUNS runs)" > "$OUTPUT_FILE"

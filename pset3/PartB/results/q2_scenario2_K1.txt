@@ -4,7 +4,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 3907 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 1000000 <T>: 0.002785205841 sec  <B>: 8.025166923472 GB/sec  <F>: 0.359039890430 GFLOP/sec
+N: 1000000 <T>: 0.002782106400 sec  <B>: 8.034107464221 GB/sec  <F>: 0.359439883452 GFLOP/sec
 Result verification: PASSED
 
 run 2/5:
@@ -13,7 +13,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 3907 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 1000000 <T>: 0.002790927887 sec  <B>: 8.008713480267 GB/sec  <F>: 0.358303775841 GFLOP/sec
+N: 1000000 <T>: 0.002780914307 sec  <B>: 8.037551440329 GB/sec  <F>: 0.359593964335 GFLOP/sec
 Result verification: PASSED
 
 run 3/5:
@@ -22,7 +22,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 3907 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 1000000 <T>: 0.002605915070 sec  <B>: 8.577310155535 GB/sec  <F>: 0.383742360476 GFLOP/sec
+N: 1000000 <T>: 0.002784967422 sec  <B>: 8.025853950860 GB/sec  <F>: 0.359070627515 GFLOP/sec
 Result verification: PASSED
 
 run 4/5:
@@ -31,7 +31,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 3907 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 1000000 <T>: 0.002784013748 sec  <B>: 8.028603237133 GB/sec  <F>: 0.359193628500 GFLOP/sec
+N: 1000000 <T>: 0.002789020538 sec  <B>: 8.014190459908 GB/sec  <F>: 0.358548811763 GFLOP/sec
 Result verification: PASSED
 
 run 5/5:
@@ -40,6 +40,6 @@ initializing vectors...
 performing vector addition on GPU (Scenario 2: 1 block, 256 threads)...
 Launching kernel: 1 blocks, 256 threads, 256 total threads, 3907 elements per thread
 Scenario 2 (1 block, 256 threads):
-N: 1000000 <T>: 0.002562999725 sec  <B>: 8.720930232558 GB/sec  <F>: 0.390167813953 GFLOP/sec
+N: 1000000 <T>: 0.002775907516 sec  <B>: 8.052048441123 GB/sec  <F>: 0.360242549171 GFLOP/sec
 Result verification: PASSED
 

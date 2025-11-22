@@ -21,8 +21,8 @@ for K in "${K_values[@]}"; do
         OUTPUT_FILE="results/q2_scenario${scenario}_K${K}.txt"
         
         echo "----------------------------------------"
-        echo "Testing K = $K million, Scenario $scenario ($N_RUNS runs)"
-        echo "Output: $OUTPUT_FILE"
+        echo "testing K = $K million, Scenario $scenario ($N_RUNS runs)"
+        echo "output: $OUTPUT_FILE"
         echo "----------------------------------------"
     
         

@@ -4,7 +4,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 5000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 5000000 <T>: 0.663519144058 sec  <B>: 0.168433284789 GB/sec  <F>: 0.007535577601 GFLOP/sec
+N: 5000000 <T>: 0.667196989059 sec  <B>: 0.167504816098 GB/sec  <F>: 0.007494038615 GFLOP/sec
 Result verification: PASSED
 
 run 2/5:
@@ -13,7 +13,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 5000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 5000000 <T>: 0.672187805176 sec  <B>: 0.166261137279 GB/sec  <F>: 0.007438397367 GFLOP/sec
+N: 5000000 <T>: 0.671894073486 sec  <B>: 0.166333821601 GB/sec  <F>: 0.007441649208 GFLOP/sec
 Result verification: PASSED
 
 run 3/5:
@@ -22,7 +22,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 5000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 5000000 <T>: 0.666476964951 sec  <B>: 0.167685778851 GB/sec  <F>: 0.007502134752 GFLOP/sec
+N: 5000000 <T>: 0.668260812759 sec  <B>: 0.167238160341 GB/sec  <F>: 0.007482108639 GFLOP/sec
 Result verification: PASSED
 
 run 4/5:
@@ -31,7 +31,7 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 5000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 5000000 <T>: 0.669182062149 sec  <B>: 0.167007926953 GB/sec  <F>: 0.007471808171 GFLOP/sec
+N: 5000000 <T>: 0.669777870178 sec  <B>: 0.166859363275 GB/sec  <F>: 0.007465161545 GFLOP/sec
 Result verification: PASSED
 
 run 5/5:
@@ -40,6 +40,6 @@ initializing vectors...
 performing vector addition on GPU (Scenario 1: 1 block, 1 thread)...
 Launching kernel: 1 blocks, 1 threads, 1 total threads, 5000000 elements per thread
 Scenario 1 (1 block, 1 thread):
-N: 5000000 <T>: 0.668754816055 sec  <B>: 0.167114622984 GB/sec  <F>: 0.007476581671 GFLOP/sec
+N: 5000000 <T>: 0.663450002670 sec  <B>: 0.168450838050 GB/sec  <F>: 0.007536362921 GFLOP/sec
 Result verification: PASSED
 

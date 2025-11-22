@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "functional": "c",
-        "timing.h": "c"
+        "timing.h": "c",
+        "iostream": "cpp"
     }
 }

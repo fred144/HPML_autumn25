@@ -194,4 +194,90 @@ Nonetheless, the use of shared memory and loop unrolling in matmult01 leads to s
 
 Compare vector operations executed on host vs on GPU to quantify the speed-up.
 
+This section is done with the same approach and structure, note we used the same timer function from Part A, we just renamed it to `timer.cpp` for compilation.
+```
+-rw-r--r-- 1 fbg2107 fbg2107   706 Nov 21 18:44 Makefile
+-rwxr-xr-x 1 fbg2107 fbg2107 17664 Nov 21 04:36 q1
+-rw-r--r-- 1 fbg2107 fbg2107  2780 Nov 21 20:40 q1.cpp
+-rw-r--r-- 1 fbg2107 fbg2107   329 Nov 20 22:17 q1_averages_summary.txt
+-rwxr-xr-x 1 fbg2107 fbg2107  1004 Nov 21 04:19 q1_trials_script.sh
+-rwxr-xr-x 1 fbg2107 fbg2107 27536 Nov 21 23:47 q2
+-rw-r--r-- 1 fbg2107 fbg2107  7947 Nov 21 23:51 q2.cu
+-rwxr-xr-x 1 fbg2107 fbg2107  1306 Nov 21 16:24 q2_trials_script.sh
+-rwxr-xr-x 1 fbg2107 fbg2107 27392 Nov 21 18:43 q3
+-rw-r--r-- 1 fbg2107 fbg2107  6202 Nov 21 23:47 q3.cu
+-rwxr-xr-x 1 fbg2107 fbg2107  1377 Nov 21 18:43 q3_trials_script.sh
+-rw-r--r-- 1 fbg2107 fbg2107 11247 Nov 21 20:40 q4.py
+-rw-r--r-- 1 fbg2107 fbg2107 79291 Nov 21 23:53 q4_with_unified.jpg
+-rw-r--r-- 1 fbg2107 fbg2107 78989 Nov 21 23:53 q4_without_unified.jpg
+drwxr-xr-x 2 fbg2107 fbg2107  4096 Nov 21 23:53 results
+-rw-r--r-- 1 fbg2107 fbg2107  1253 Nov 21 03:48 timer.cpp
+-rw-r--r-- 1 fbg2107 fbg2107   522 Nov 21 03:48 timer.h
+-rw-r--r-- 1 fbg2107 fbg2107  6712 Nov 21 04:34 timer.o
+```
+
+In addition to what was asked we also wrote scripts to automate 
+`q1_trials_script.sh`, `q2_trials_script.sh`, `q3_trials_script.sh` to run multiple trials for different values of K (size of vectors in millions) and save the results to text files in `results/` directory.
+
 ### Q1 
+Here are the average results for Q1:
+```
+# K avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+1 0.002086210251 5.465577734215 0.489051617129
+5 0.009333992004 5.993899830868 0.536325078106
+10 0.019168758392 5.830758696457 0.521727456503
+50 0.092004871368 6.074042939642 0.543496162089
+100 0.184517955780 6.058384558238 0.542095073838
+```
+
+### Q2 nonUnified Memory version
+Here are the average results for Q2 (non-unified memory version):
+```
+# K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+1 1 0.200423622131 0.111603769348 0.004993068119
+1 2 0.002782583237 8.032750351288 0.359379167247
+1 3 0.000149345398 149.739823709605 6.699246309808
+5 1 0.668115949630 0.167277399873 0.007483864186
+5 2 0.011853647232 9.486738745779 0.424429506862
+5 3 0.000522565842 213.870468397809 9.568402784883
+10 1 1.252671957016 0.178435731384 0.007983079487
+10 2 0.022222614288 10.058939931502 0.450029354565
+10 3 0.000956630707 233.658750734591 10.453715550305
+50 1 5.929305791855 0.188486438225 0.008432740499
+50 2 0.100202846527 11.154430355526 0.499040766484
+50 3 0.004606866837 242.591866092587 10.853376366076
+100 1 11.781501483917 0.189718988485 0.008487883864
+100 2 0.183037233353 12.219445168486 0.546688722645
+100 3 0.009260988235 241.353830442952 10.797987588717
+```
+
+### Q3 Unified Memory version
+also stored in the directory `results/` are the average results for Q3 (unified memory version):
+```
+# K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+1 1 0.184779071808 0.121063959839 0.005416309877
+1 2 0.006499767303 3.446873835570 0.154210524971
+1 3 0.004982995987 4.488481686457 0.200811271375
+5 1 0.583937597275 0.191397754793 0.008562990598
+5 2 0.027215051651 4.111342559982 0.183938352477
+5 3 0.022680616379 4.928769488042 0.220509414174
+10 1 1.089886617660 0.205089977209 0.009175570259
+10 2 0.053059864044 4.215309893795 0.188589772254
+10 3 0.045818138123 4.881081848937 0.218375905316
+50 1 5.189038324356 0.215375546648 0.009635738846
+50 2 0.263823032379 4.241069884242 0.189742254717
+50 3 0.224498176575 4.981047836012 0.222848307869
+100 1 10.256094980240 0.217939277206 0.009750438209
+100 2 0.495988655090 4.510801891350 0.201809860439
+100 3 0.434904384613 5.139927252743 0.229956452649
+```
+
+### Q4 Analysis 
+The figures are here for non-unified memory version:
+![Q4_without_unified](./PartB/q4_without_unified.jpg)
+We see that for both versions, as K increases, the  time taken for addition increases, which makes sense.
+
+
+while here are the figures for unified memory version:
+![Q4_with_unified](./PartB/q4_with_unified.jpg)
+
