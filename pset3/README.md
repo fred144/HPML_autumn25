@@ -279,12 +279,12 @@ K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
 Note, the trials here are the arithmetic averages of the time taken in 5 trials for each configuration.
 
 >The figure is here for non-unified memory version for the three scenarios for the GPU implementaiton: using one block with one thread (orange), using one block with 256 threads (green), and using multiple blocks with 256 threads each (red).
->![Q4_without_unified](./PartB/q4_without_unified.jpg)
+> <img src="./PartB/q4_without_unified.jpg" alt="Q4 without unified" width="500"/>
 > We see that for both the sole CPU and CPU + GPU, as K increases, the  time taken for addition increases, which makes sense. The slowest is the one block with one thread (orange), which is expected since it cannot really use the parallelism of the GPU.  The one block with 256 threads (green) is better, decreasing by around 2 order of magnitude. This is comparable to the CPU only implementation in blue, which might hint at the overhead of data transfer between host and device when we use one block with 256 threads. The best performance is achieved when we use multiple blocks with 256 threads each (red). This uses the full parallelism of the GPU and is by far the faster with an order of magnitude improvement over the one block with 256 threads (green) and CPU.
 
 
 >While here are the figures for unified memory version:
-![Q4_with_unified](./PartB/q4_with_unified.jpg)
+<img src="./PartB/q4_with_unified.jpg" alt="Q4 with unified" width="500"/>
 >This one is a little tricky. The scaling as function of K is still the same. And the trend amongst the GPU setups are still consistent with the non-unified memory version: one block with one thread (orange) is the slowest, one block with 256 threads (green) is better, and multiple blocks with 256 threads each (red) is the best. However, CPU appears teh fastest here, which is counter-intuitive. 
 
 > However, we are told in the Lecture 6 that harware automatically manages data movement between different memory leveles in unified memory and that UVM is primarily about ease of programming. That is, it is not primarily a "technique to make well written CUDA codes run faster" nad that "it can't do better than epxertly written manual data movement; in most cases it can be harder to achiev expected concurrnecy behavior". In a simple case such as vector addition, it is possible that the overhead of UVM management outweighs the benefits of GPU parallelism.

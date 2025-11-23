@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>fbg2107 - HW3</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension searKing.preview-vscode */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.preview-vscode-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="fbg2107---hw3" tabindex="-1" id="fbg2107---hw3">fbg2107 - HW3</h1>
+<h2 id="part-a" tabindex="-1" id="part-a">Part A</h2>
+<p>the code for Part A is in the <code class="hljs">pset3<span class="hljs-regexp">/PartA/</span></code> directory.
+The Makefile therein is just for this part.
+in additon to the kernel codes required we also have</p>
+<script type="module" src="https://unpkg.com/@github/clipboard-copy-element@latest"></script>
+<style>
+    .ClipboardButton {
+        position: relative;
+    }
+
+    clipboard-copy {
+        /* padding: 0.4em 0.6em; */
+        font: 0.9rem system-ui, sans-serif;
+        display: inline-block;
+        cursor: default;
+        color: var(--vscode-button-foreground);
+        background-color: var(--vscode-button-border);
+        border-color: var(--vscode-textCodeBlock-background);
+        border-radius: 6px;
+        border: 1px solid var(--vscode-widget-border);
+        box-shadow: inset 0 -1px 0 var(--vscode-widget-shadow);
+        transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+        transition-property: color,background-color,box-shadow,border-color;
+    }
+
+    clipboard-copy:hover {
+        background-color: var(--vscode-statusBarItem-hoverBackground);
+    }
+
+    clipboard-copy:active {
+        outline: 1px solid var(--vscode-contrastActiveBorder) !important;
+        outline-offset: -1px;
+    }
+
+    clipboard-copy:focus-visible {
+        outline: 1px solid var(--vscode-focusBorder);
+    }
+
+    .d-none {
+        display: none !important;
+    }
+
+    .position-relative {
+        position: relative !important;
+    }
+
+    .position-absolute {
+        position: absolute !important;
+    }
+
+    .right-0 {
+        right: 0 !important;
+    }
+
+    .top-0 {
+        top: 0 !important;
+    }
+
+    .m-2 {
+        margin: var(--base-size-8, 8px) !important;
+    }
+
+    .color-fg-success {
+        color: #3fb950 !important;
+        stroke: #3fb950 !important;
+        border-color: #3fb950 !important;
+    }
+</style>
+<script>
+    document.addEventListener('clipboard-copy', function (event) {
+        const notice_clipboard_copy = event.target;
+        console.log(`notice_clipboard_copy = ${notice_clipboard_copy}`)
+        const notice_copy = event.target.querySelector('.clipboard-copy-icon');
+        const notice_check = event.target.querySelector('.clipboard-check-icon');
+        notice_clipboard_copy.classList.add("color-fg-success");
+        notice_copy.classList.add("d-none");
+        notice_check.classList.remove("d-none");
+        setTimeout(function () {
+            notice_clipboard_copy.classList.remove("color-fg-success");
+            notice_copy.classList.remove("d-none");
+            notice_check.classList.add("d-none");
+        }, 1000)
+    })
+</script><div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">vecaddKer<span class="hljs-symbol">nel01</span>.cu
+matmultKer<span class="hljs-symbol">nel01</span>.cu
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="vecaddKernel01.cu
+matmultKernel01.cu" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><p>for each problem, there are also batch scripts to run multiple trials and python scripts to analyze the results by taking averages.</p>
+<p>The files to do multiple run for each configuration (either values per threa   d or matrix size) and save the results to text files are in</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">ru<span class="hljs-symbol">n_trial_save_analyze_Problem1</span>.sh
+ru<span class="hljs-symbol">n_trial_save_analyze_Problem2</span>.sh
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="run_trial_save_analyze_Problem1.sh
+run_trial_save_analyze_Problem2.sh" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><p>the raw data can then be found in <code class="hljs"><span class="hljs-attribute">results</span></code>, which is then prcess by</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">a<span class="hljs-symbol">nalyze_trials_P1</span>_q<span class="hljs-number">1</span>q<span class="hljs-number">2.</span>py
+a<span class="hljs-symbol">nalyze_trials_P1</span>_q<span class="hljs-number">3</span>q<span class="hljs-number">4.</span>py
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="analyze_trials_P1_q1q2.py
+analyze_trials_P1_q3q4.py" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><p>the output of which are piped to text files in <code class="hljs"><span class="hljs-attribute">results</span></code> as well.</p>
+<p>We will discuss them, in turn, below.</p>
+<h3 id="problem-1---vector-add-and-coalescing-memory-access" tabindex="-1" id="problem--1---vector-add-and-coalescing-memory-access">Problem  1 - Vector add and coalescing memory access</h3>
+<h4 id="q1%3A-the-response-is-in-the-makefile%2C-but-here-we-highlight-the-relevant-lines" tabindex="-1" id="q1-the-response-is-in-the-makefile-but-here-we-highlight-the-relevant-lines">Q1: The response is in the Makefile, but here we highlight the relevant lines</h4>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs language-Makefile"><span class="hljs-comment"># original non-coalesced vector addition (Q1)</span>
+vecaddKernel00.o : vecaddKernel00.cu
+  ${NVCC} <span class="hljs-variable">$&lt;</span> -c -o <span class="hljs-variable">$@</span> <span class="hljs-variable">$(OPTIONS)</span>
+
+<span class="hljs-comment"># dependencies for timing, note we are using vecadd.cu as main program</span>
+<span class="hljs-comment"># but vecaddKernel00.o as the kernel object file, this can change as </span>
+<span class="hljs-comment"># as we see below, where we write a different kernel </span>
+vecadd00 : vecadd.cu vecaddKernel.h vecaddKernel00.o timer.o 
+  ${NVCC} <span class="hljs-variable">$&lt;</span> vecaddKernel00.o -o <span class="hljs-variable">$@</span> <span class="hljs-variable">$(LIB)</span> timer.o <span class="hljs-variable">$(OPTIONS)</span>
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="# original non-coalesced vector addition (Q1)
+vecaddKernel00.o : vecaddKernel00.cu
+	${NVCC} $&lt; -c -o $@ $(OPTIONS)
+
+# dependencies for timing, note we are using vecadd.cu as main program
+# but vecaddKernel00.o as the kernel object file, this can change as 
+# as we see below, where we write a different kernel 
+vecadd00 : vecadd.cu vecaddKernel.h vecaddKernel00.o timer.o 
+	${NVCC} $&lt; vecaddKernel00.o -o $@ $(LIB) timer.o $(OPTIONS)" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><blockquote>
+<p>and also we chose to run each configuration for 5 trials, as shown below in <code class="hljs">ru<span class="hljs-symbol">n_trial_save_analyze_Problem1</span>.sh</code> to have robust measurements by averaging the time it takes for each trial.</p>
+</blockquote>
+<h4 id="q2%3A-the-output-of-this-experiment-is-stdout_analysis_q1q2" tabindex="-1" id="q2-the-output-of-this-experiment-is--stdout_analysis_q1q2">Q2: The output of this experiment is  STDOUT_analysis_q1q2</h4>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs"><span class="hljs-attribute">Q1 - vecadd00 (Non-coalesced Memory Access)
+--------------------------------------------------
+500 values/thread</span><span class="hljs-punctuation">:</span>
+  <span class="hljs-attribute">Trials</span><span class="hljs-punctuation">:</span> <span class="hljs-string">5</span>
+  <span class="hljs-attribute">Avg Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000815 sec</span>
+  <span class="hljs-attribute">Min Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000796 sec</span>
+  <span class="hljs-attribute">Max Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000829 sec</span>
+  <span class="hljs-attribute">Std Dev</span><span class="hljs-punctuation">:</span> <span class="hljs-string"> 0.000013 sec</span>
+  <span class="hljs-attribute">Avg GFlops/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">4.712858</span>
+  <span class="hljs-attribute">Avg GBytes/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">56.554295</span>
+<span class="hljs-attribute">1000 values/thread</span><span class="hljs-punctuation">:</span>
+  <span class="hljs-attribute">Trials</span><span class="hljs-punctuation">:</span> <span class="hljs-string">5</span>
+  <span class="hljs-attribute">Avg Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.004187 sec</span>
+  <span class="hljs-attribute">Min Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.001795 sec</span>
+  <span class="hljs-attribute">Max Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.012657 sec</span>
+  <span class="hljs-attribute">Std Dev</span><span class="hljs-punctuation">:</span> <span class="hljs-string"> 0.004742 sec</span>
+  <span class="hljs-attribute">Avg GFlops/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">3.141563</span>
+  <span class="hljs-attribute">Avg GBytes/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">37.698762</span>
+<span class="hljs-attribute">2000 values/thread</span><span class="hljs-punctuation">:</span>
+  <span class="hljs-attribute">Trials</span><span class="hljs-punctuation">:</span> <span class="hljs-string">5</span>
+  <span class="hljs-attribute">Avg Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.004246 sec</span>
+  <span class="hljs-attribute">Min Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.003024 sec</span>
+  <span class="hljs-attribute">Max Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.008118 sec</span>
+  <span class="hljs-attribute">Std Dev</span><span class="hljs-punctuation">:</span> <span class="hljs-string"> 0.002170 sec</span>
+  <span class="hljs-attribute">Avg GFlops/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">4.135380</span>
+  <span class="hljs-attribute">Avg GBytes/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">49.624565</span>
+
+<span class="hljs-attribute">Q2 - vecadd01 (Coalesced Memory Access)
+--------------------------------------------------
+500 values/thread</span><span class="hljs-punctuation">:</span>
+  <span class="hljs-attribute">Trials</span><span class="hljs-punctuation">:</span> <span class="hljs-string">5</span>
+  <span class="hljs-attribute">Avg Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000356 sec</span>
+  <span class="hljs-attribute">Min Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000312 sec</span>
+  <span class="hljs-attribute">Max Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000410 sec</span>
+  <span class="hljs-attribute">Std Dev</span><span class="hljs-punctuation">:</span> <span class="hljs-string"> 0.000036 sec</span>
+  <span class="hljs-attribute">Avg GFlops/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">10.881106</span>
+  <span class="hljs-attribute">Avg GBytes/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">130.573276</span>
+<span class="hljs-attribute">1000 values/thread</span><span class="hljs-punctuation">:</span>
+  <span class="hljs-attribute">Trials</span><span class="hljs-punctuation">:</span> <span class="hljs-string">5</span>
+  <span class="hljs-attribute">Avg Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000699 sec</span>
+  <span class="hljs-attribute">Min Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000651 sec</span>
+  <span class="hljs-attribute">Max Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.000748 sec</span>
+  <span class="hljs-attribute">Std Dev</span><span class="hljs-punctuation">:</span> <span class="hljs-string"> 0.000044 sec</span>
+  <span class="hljs-attribute">Avg GFlops/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">11.022135</span>
+  <span class="hljs-attribute">Avg GBytes/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">132.265613</span>
+<span class="hljs-attribute">2000 values/thread</span><span class="hljs-punctuation">:</span>
+  <span class="hljs-attribute">Trials</span><span class="hljs-punctuation">:</span> <span class="hljs-string">5</span>
+  <span class="hljs-attribute">Avg Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.001448 sec</span>
+  <span class="hljs-attribute">Min Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.001283 sec</span>
+  <span class="hljs-attribute">Max Time</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.001505 sec</span>
+  <span class="hljs-attribute">Std Dev</span><span class="hljs-punctuation">:</span> <span class="hljs-string"> 0.000094 sec</span>
+  <span class="hljs-attribute">Avg GFlops/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">10.645869</span>
+  <span class="hljs-attribute">Avg GBytes/S</span><span class="hljs-punctuation">:</span> <span class="hljs-string">127.750435</span>
+
+<span class="hljs-attribute">PERFORMANCE COMPARISON - Coalesced vs Non-coalesced
+------------------------------------------------------------
+Speedup = Non-coalesced Time / Coalesced Time
+(Higher speedup = better performance)
+------------------------------------------------------------
+ 500 values/thread</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2.29x speedup (++129.2%)</span>
+<span class="hljs-attribute">1000 values/thread</span><span class="hljs-punctuation">:</span> <span class="hljs-string">5.99x speedup (++499.1%)</span>
+<span class="hljs-attribute">2000 values/thread</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2.93x speedup (++193.2%)</span>
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="Q1 - vecadd00 (Non-coalesced Memory Access)
+--------------------------------------------------
+500 values/thread:
+  Trials: 5
+  Avg Time: 0.000815 sec
+  Min Time: 0.000796 sec
+  Max Time: 0.000829 sec
+  Std Dev:  0.000013 sec
+  Avg GFlops/S: 4.712858
+  Avg GBytes/S: 56.554295
+1000 values/thread:
+  Trials: 5
+  Avg Time: 0.004187 sec
+  Min Time: 0.001795 sec
+  Max Time: 0.012657 sec
+  Std Dev:  0.004742 sec
+  Avg GFlops/S: 3.141563
+  Avg GBytes/S: 37.698762
+2000 values/thread:
+  Trials: 5
+  Avg Time: 0.004246 sec
+  Min Time: 0.003024 sec
+  Max Time: 0.008118 sec
+  Std Dev:  0.002170 sec
+  Avg GFlops/S: 4.135380
+  Avg GBytes/S: 49.624565
+
+Q2 - vecadd01 (Coalesced Memory Access)
+--------------------------------------------------
+500 values/thread:
+  Trials: 5
+  Avg Time: 0.000356 sec
+  Min Time: 0.000312 sec
+  Max Time: 0.000410 sec
+  Std Dev:  0.000036 sec
+  Avg GFlops/S: 10.881106
+  Avg GBytes/S: 130.573276
+1000 values/thread:
+  Trials: 5
+  Avg Time: 0.000699 sec
+  Min Time: 0.000651 sec
+  Max Time: 0.000748 sec
+  Std Dev:  0.000044 sec
+  Avg GFlops/S: 11.022135
+  Avg GBytes/S: 132.265613
+2000 values/thread:
+  Trials: 5
+  Avg Time: 0.001448 sec
+  Min Time: 0.001283 sec
+  Max Time: 0.001505 sec
+  Std Dev:  0.000094 sec
+  Avg GFlops/S: 10.645869
+  Avg GBytes/S: 127.750435
+
+PERFORMANCE COMPARISON - Coalesced vs Non-coalesced
+------------------------------------------------------------
+Speedup = Non-coalesced Time / Coalesced Time
+(Higher speedup = better performance)
+------------------------------------------------------------
+ 500 values/thread: 2.29x speedup (++129.2%)
+1000 values/thread: 5.99x speedup (++499.1%)
+2000 values/thread: 2.93x speedup (++193.2%)" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><blockquote>
+<p>Based on our observations, changing from non-coalesced to coalesced memory access broadly increases the performance of the vector addition operation. This is as expected because coalesced memory access allows for more efficient use of the GPU's memory bandwidth by accessing things that are close together in memory, reducing the number of memory transactions required.</p>
+</blockquote>
+<h3 id="problem-2---matrix-multiplication-with-shared-memory-and-loop-unrolling" tabindex="-1" id="problem-2---matrix-multiplication-with-shared-memory-and-loop-unrolling">Problem 2 - Matrix multiplication with shared memory and loop unrolling</h3>
+<p>The BLOCK_SIZE is the number of threads in a thread block (16x16 = 256 threads). This is always 16 for both matmult00 and matmult01.</p>
+<p>The FOOTPRINT_SIZE (changing from 16 to 32), changes the size of the output submatrix that each thread block computes.</p>
+<p>So for matmult00</p>
+<ul>
+<li>Threads per block: 16 × 16 = 256 threads</li>
+<li>Elements per block: 16 × 16 = 256 elements</li>
+<li>Elements per thread: 256 / 256 = 1 element
+and for matmult01</li>
+<li>Threads per block: 16 × 16 = 256 threads</li>
+<li>Elements per block: 32 × 32 = 1024 elements</li>
+<li>Elements per thread: 1024 / 256 = 4 elements</li>
+</ul>
+<h4 id="q3%3A-here%2C-we-chose-to-8-trials-for-each-matrix-size-to-have-robust-measurements-by-averaging-the-time-it-takes-for-each-trial%2C-as-shown-in-run_trial_save_analyze_problem2.sh." tabindex="-1" id="q3-here-we-chose-to-8-trials-for-each-matrix-size-to-have-robust-measurements-by-averaging-the-time-it-takes-for-each-trial-as-shown-in-run_trial_save_analyze_problem2sh">Q3: here, we chose to 8 trials for each matrix size to have robust measurements by averaging the time it takes for each trial, as shown in <code class="hljs">ru<span class="hljs-symbol">n_trial_save_analyze_Problem2</span>.sh</code>.</h4>
+<p>and the output of this experiment is  STDOUT_analysis_q3q4</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs"><span class="hljs-section">matmul averaging
+================================================================================</span>
+<span class="hljs-section">Matrix       Version    Trials Avg Time (s) Avg GFlops/S Min Time   Max Time  
+--------------------------------------------------------------------------------</span>
+256x256      matmult00  8      0.000096    367.05    0.000069  0.000114
+512x512      matmult00  8      0.000621    454.12    0.000425  0.000752
+1024x1024    matmult00  8      0.003590    605.20    0.002881  0.004056
+256x256      matmult01  8      0.000054    648.98    0.000040  0.000075
+512x512      matmult01  8      0.000323    884.55    0.000218  0.000422
+<span class="hljs-section">1024x1024    matmult01  8      0.002443    956.86    0.001545  0.003400
+--------------------------------------------------------------------------------</span>
+
+<span class="hljs-section">speedup (matmult01 vs matmult00)
+==================================================</span>
+<span class="hljs-section">Matrix Size  Speedup    GFlops Improvement  
+--------------------------------------------------</span>
+256x256      1.76x     +76.8%
+512x512      1.92x     +94.8%
+1024x1024    1.47x     +58.1%
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+matmult00:
+<span class="hljs-code">  256x256: 8 trials, std dev: 0.000020s</span>
+<span class="hljs-code">  512x512: 8 trials, std dev: 0.000142s</span>
+<span class="hljs-code">  1024x1024: 8 trials, std dev: 0.000398s</span>
+
+matmult01:
+<span class="hljs-code">  256x256: 8 trials, std dev: 0.000014s</span>
+<span class="hljs-code">  512x512: 8 trials, std dev: 0.000086s</span>
+<span class="hljs-code">  1024x1024: 8 trials, std dev: 0.000731s</span>
+
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="matmul averaging
+================================================================================
+Matrix       Version    Trials Avg Time (s) Avg GFlops/S Min Time   Max Time  
+--------------------------------------------------------------------------------
+256x256      matmult00  8      0.000096    367.05    0.000069  0.000114
+512x512      matmult00  8      0.000621    454.12    0.000425  0.000752
+1024x1024    matmult00  8      0.003590    605.20    0.002881  0.004056
+256x256      matmult01  8      0.000054    648.98    0.000040  0.000075
+512x512      matmult01  8      0.000323    884.55    0.000218  0.000422
+1024x1024    matmult01  8      0.002443    956.86    0.001545  0.003400
+--------------------------------------------------------------------------------
+
+speedup (matmult01 vs matmult00)
+==================================================
+Matrix Size  Speedup    GFlops Improvement  
+--------------------------------------------------
+256x256      1.76x     +76.8%
+512x512      1.92x     +94.8%
+1024x1024    1.47x     +58.1%
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+matmult00:
+  256x256: 8 trials, std dev: 0.000020s
+  512x512: 8 trials, std dev: 0.000142s
+  1024x1024: 8 trials, std dev: 0.000398s
+
+matmult01:
+  256x256: 8 trials, std dev: 0.000014s
+  512x512: 8 trials, std dev: 0.000086s
+  1024x1024: 8 trials, std dev: 0.000731s" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><h4 id="q4%3A-results-of-the-experimemt" tabindex="-1" id="q4-results-of-the-experimemt">Q4: Results of the experimemt</h4>
+<p>show that matmult01, which uses shared memory and loop unrolling, consistently outperforms matmult00 across all tested matrix sizes.</p>
+<p>The speedup ranges from approximately 1.47x to 1.92x, with the most significant improvement observed at the 512x512 matrix size. This shows that there is an optimum matrix size (in this case 512x512) where the benefits of shared memory and loop unrolling are most pronounced. When it gets too large (1024x1024), the speedup decreases, possibly due to increased memory access overhead or other factors.</p>
+<p>Nonetheless, the use of shared memory and loop unrolling in matmult01 leads to substantial performance improvements in matrix multiplication on the GPU, almost reaching double in some cases.</p>
+<h4 id="q5%3A-some-performance-suggestion" tabindex="-1" id="q5-some-performance-suggestion">Q5: some performance suggestion</h4>
+<ul>
+<li>memomry coalescing    ensures adjacent threads are accesed</li>
+<li>unrolling loops reduces the overhead of loop control and increases instruction-level parallelism</li>
+<li>computing more per thread by increasing footprint size reduces the number of thread blocks and overhead associated with managing them</li>
+<li>there might be diminishing returns when increasing footprint size too much due to increased register pressure and memory access overhead</li>
+</ul>
+<h2 id="part-b%3A-cuda-unified-memory" tabindex="-1" id="part-b-cuda-unified-memory">Part-B: CUDA Unified Memory</h2>
+<p>Compare vector operations executed on host vs on GPU to quantify the speed-up.</p>
+<p>This section is done with the same approach and structure, note we used the same timer function from Part A, we just renamed it to <code class="hljs"><span class="hljs-section">timer</span>.cpp</code> for compilation.</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107  <span class="hljs-number"> 706 </span>Nov<span class="hljs-number"> 21 </span>18:44 Makefile
+-rwxr-xr-x<span class="hljs-number"> 1 </span>fbg2107 fbg2107<span class="hljs-number"> 17664 </span>Nov<span class="hljs-number"> 21 </span>04:36 q1
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 2780 </span>Nov<span class="hljs-number"> 21 </span>20:40 q1.cpp
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107  <span class="hljs-number"> 329 </span>Nov<span class="hljs-number"> 20 </span>22:17 q1_averages_summary.txt
+-rwxr-xr-x<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 1004 </span>Nov<span class="hljs-number"> 21 </span>04:19 q1_trials_script.sh
+-rwxr-xr-x<span class="hljs-number"> 1 </span>fbg2107 fbg2107<span class="hljs-number"> 27536 </span>Nov<span class="hljs-number"> 21 </span>23:47 q2
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 7947 </span>Nov<span class="hljs-number"> 21 </span>23:51 q2.cu
+-rwxr-xr-x<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 1306 </span>Nov<span class="hljs-number"> 21 </span>16:24 q2_trials_script.sh
+-rwxr-xr-x<span class="hljs-number"> 1 </span>fbg2107 fbg2107<span class="hljs-number"> 27392 </span>Nov<span class="hljs-number"> 21 </span>18:43 q3
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 6202 </span>Nov<span class="hljs-number"> 21 </span>23:47 q3.cu
+-rwxr-xr-x<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 1377 </span>Nov<span class="hljs-number"> 21 </span>18:43 q3_trials_script.sh
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107<span class="hljs-number"> 11247 </span>Nov<span class="hljs-number"> 21 </span>20:40 q4.py
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107<span class="hljs-number"> 79291 </span>Nov<span class="hljs-number"> 21 </span>23:53 q4_with_unified.jpg
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107<span class="hljs-number"> 78989 </span>Nov<span class="hljs-number"> 21 </span>23:53 q4_without_unified.jpg
+drwxr-xr-x<span class="hljs-number"> 2 </span>fbg2107 fbg2107 <span class="hljs-number"> 4096 </span>Nov<span class="hljs-number"> 21 </span>23:53 results
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 1253 </span>Nov<span class="hljs-number"> 21 </span>03:48 timer.cpp
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107  <span class="hljs-number"> 522 </span>Nov<span class="hljs-number"> 21 </span>03:48 timer.h
+-rw-r--r--<span class="hljs-number"> 1 </span>fbg2107 fbg2107 <span class="hljs-number"> 6712 </span>Nov<span class="hljs-number"> 21 </span>04:34 timer.o
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="-rw-r--r-- 1 fbg2107 fbg2107   706 Nov 21 18:44 Makefile
+-rwxr-xr-x 1 fbg2107 fbg2107 17664 Nov 21 04:36 q1
+-rw-r--r-- 1 fbg2107 fbg2107  2780 Nov 21 20:40 q1.cpp
+-rw-r--r-- 1 fbg2107 fbg2107   329 Nov 20 22:17 q1_averages_summary.txt
+-rwxr-xr-x 1 fbg2107 fbg2107  1004 Nov 21 04:19 q1_trials_script.sh
+-rwxr-xr-x 1 fbg2107 fbg2107 27536 Nov 21 23:47 q2
+-rw-r--r-- 1 fbg2107 fbg2107  7947 Nov 21 23:51 q2.cu
+-rwxr-xr-x 1 fbg2107 fbg2107  1306 Nov 21 16:24 q2_trials_script.sh
+-rwxr-xr-x 1 fbg2107 fbg2107 27392 Nov 21 18:43 q3
+-rw-r--r-- 1 fbg2107 fbg2107  6202 Nov 21 23:47 q3.cu
+-rwxr-xr-x 1 fbg2107 fbg2107  1377 Nov 21 18:43 q3_trials_script.sh
+-rw-r--r-- 1 fbg2107 fbg2107 11247 Nov 21 20:40 q4.py
+-rw-r--r-- 1 fbg2107 fbg2107 79291 Nov 21 23:53 q4_with_unified.jpg
+-rw-r--r-- 1 fbg2107 fbg2107 78989 Nov 21 23:53 q4_without_unified.jpg
+drwxr-xr-x 2 fbg2107 fbg2107  4096 Nov 21 23:53 results
+-rw-r--r-- 1 fbg2107 fbg2107  1253 Nov 21 03:48 timer.cpp
+-rw-r--r-- 1 fbg2107 fbg2107   522 Nov 21 03:48 timer.h
+-rw-r--r-- 1 fbg2107 fbg2107  6712 Nov 21 04:34 timer.o" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><p>In addition to what was asked we also wrote scripts to automate
+<code class="hljs">q1_trials_script.<span class="hljs-keyword">sh</span></code>, <code class="hljs">q2_trials_script.<span class="hljs-keyword">sh</span></code>, <code class="hljs">q3_trials_script.<span class="hljs-keyword">sh</span></code> to run multiple trials for different values of K (size of vectors in millions) and save the results to text files in <code class="hljs">results/</code> directory.</p>
+<p>Finally, this data is post processed and whatnot for averages as well as plotted for Q4  and is done in <code class="hljs">q4.<span class="hljs-keyword">py</span></code>.</p>
+<h3 id="q1" tabindex="-1" id="q1">Q1</h3>
+<p>Here are the average results for Q1:</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs"><span class="hljs-attribute">K</span> avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+<span class="hljs-attribute">1</span> <span class="hljs-number">0</span>.<span class="hljs-number">002086210251</span> <span class="hljs-number">5</span>.<span class="hljs-number">465577734215</span> <span class="hljs-number">0</span>.<span class="hljs-number">489051617129</span>
+<span class="hljs-attribute">5</span> <span class="hljs-number">0</span>.<span class="hljs-number">009333992004</span> <span class="hljs-number">5</span>.<span class="hljs-number">993899830868</span> <span class="hljs-number">0</span>.<span class="hljs-number">536325078106</span>
+<span class="hljs-attribute">10</span> <span class="hljs-number">0</span>.<span class="hljs-number">019168758392</span> <span class="hljs-number">5</span>.<span class="hljs-number">830758696457</span> <span class="hljs-number">0</span>.<span class="hljs-number">521727456503</span>
+<span class="hljs-attribute">50</span> <span class="hljs-number">0</span>.<span class="hljs-number">092004871368</span> <span class="hljs-number">6</span>.<span class="hljs-number">074042939642</span> <span class="hljs-number">0</span>.<span class="hljs-number">543496162089</span>
+<span class="hljs-attribute">100</span> <span class="hljs-number">0</span>.<span class="hljs-number">184517955780</span> <span class="hljs-number">6</span>.<span class="hljs-number">058384558238</span> <span class="hljs-number">0</span>.<span class="hljs-number">542095073838</span>
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="K avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+1 0.002086210251 5.465577734215 0.489051617129
+5 0.009333992004 5.993899830868 0.536325078106
+10 0.019168758392 5.830758696457 0.521727456503
+50 0.092004871368 6.074042939642 0.543496162089
+100 0.184517955780 6.058384558238 0.542095073838" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><h3 id="q2-nonunified-memory-version" tabindex="-1" id="q2-nonunified-memory-version">Q2 nonUnified Memory version</h3>
+<p>Here are the average results for Q2 (non-unified memory version):</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs"><span class="hljs-attribute">K</span> Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+<span class="hljs-attribute">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>.<span class="hljs-number">200423622131</span> <span class="hljs-number">0</span>.<span class="hljs-number">111603769348</span> <span class="hljs-number">0</span>.<span class="hljs-number">004993068119</span>
+<span class="hljs-attribute">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">002782583237</span> <span class="hljs-number">8</span>.<span class="hljs-number">032750351288</span> <span class="hljs-number">0</span>.<span class="hljs-number">359379167247</span>
+<span class="hljs-attribute">1</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">000149345398</span> <span class="hljs-number">149</span>.<span class="hljs-number">739823709605</span> <span class="hljs-number">6</span>.<span class="hljs-number">699246309808</span>
+<span class="hljs-attribute">5</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>.<span class="hljs-number">668115949630</span> <span class="hljs-number">0</span>.<span class="hljs-number">167277399873</span> <span class="hljs-number">0</span>.<span class="hljs-number">007483864186</span>
+<span class="hljs-attribute">5</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">011853647232</span> <span class="hljs-number">9</span>.<span class="hljs-number">486738745779</span> <span class="hljs-number">0</span>.<span class="hljs-number">424429506862</span>
+<span class="hljs-attribute">5</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">000522565842</span> <span class="hljs-number">213</span>.<span class="hljs-number">870468397809</span> <span class="hljs-number">9</span>.<span class="hljs-number">568402784883</span>
+<span class="hljs-attribute">10</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>.<span class="hljs-number">252671957016</span> <span class="hljs-number">0</span>.<span class="hljs-number">178435731384</span> <span class="hljs-number">0</span>.<span class="hljs-number">007983079487</span>
+<span class="hljs-attribute">10</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">022222614288</span> <span class="hljs-number">10</span>.<span class="hljs-number">058939931502</span> <span class="hljs-number">0</span>.<span class="hljs-number">450029354565</span>
+<span class="hljs-attribute">10</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">000956630707</span> <span class="hljs-number">233</span>.<span class="hljs-number">658750734591</span> <span class="hljs-number">10</span>.<span class="hljs-number">453715550305</span>
+<span class="hljs-attribute">50</span> <span class="hljs-number">1</span> <span class="hljs-number">5</span>.<span class="hljs-number">929305791855</span> <span class="hljs-number">0</span>.<span class="hljs-number">188486438225</span> <span class="hljs-number">0</span>.<span class="hljs-number">008432740499</span>
+<span class="hljs-attribute">50</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">100202846527</span> <span class="hljs-number">11</span>.<span class="hljs-number">154430355526</span> <span class="hljs-number">0</span>.<span class="hljs-number">499040766484</span>
+<span class="hljs-attribute">50</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">004606866837</span> <span class="hljs-number">242</span>.<span class="hljs-number">591866092587</span> <span class="hljs-number">10</span>.<span class="hljs-number">853376366076</span>
+<span class="hljs-attribute">100</span> <span class="hljs-number">1</span> <span class="hljs-number">11</span>.<span class="hljs-number">781501483917</span> <span class="hljs-number">0</span>.<span class="hljs-number">189718988485</span> <span class="hljs-number">0</span>.<span class="hljs-number">008487883864</span>
+<span class="hljs-attribute">100</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">183037233353</span> <span class="hljs-number">12</span>.<span class="hljs-number">219445168486</span> <span class="hljs-number">0</span>.<span class="hljs-number">546688722645</span>
+<span class="hljs-attribute">100</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">009260988235</span> <span class="hljs-number">241</span>.<span class="hljs-number">353830442952</span> <span class="hljs-number">10</span>.<span class="hljs-number">797987588717</span>
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+1 1 0.200423622131 0.111603769348 0.004993068119
+1 2 0.002782583237 8.032750351288 0.359379167247
+1 3 0.000149345398 149.739823709605 6.699246309808
+5 1 0.668115949630 0.167277399873 0.007483864186
+5 2 0.011853647232 9.486738745779 0.424429506862
+5 3 0.000522565842 213.870468397809 9.568402784883
+10 1 1.252671957016 0.178435731384 0.007983079487
+10 2 0.022222614288 10.058939931502 0.450029354565
+10 3 0.000956630707 233.658750734591 10.453715550305
+50 1 5.929305791855 0.188486438225 0.008432740499
+50 2 0.100202846527 11.154430355526 0.499040766484
+50 3 0.004606866837 242.591866092587 10.853376366076
+100 1 11.781501483917 0.189718988485 0.008487883864
+100 2 0.183037233353 12.219445168486 0.546688722645
+100 3 0.009260988235 241.353830442952 10.797987588717" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><h3 id="q3-unified-memory-version" tabindex="-1" id="q3-unified-memory-version">Q3 Unified Memory version</h3>
+<p>also stored in the directory <code class="hljs">results/</code> are the average results for Q3 (unified memory version):</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs"><span class="hljs-attribute">K</span> Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+<span class="hljs-attribute">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>.<span class="hljs-number">184779071808</span> <span class="hljs-number">0</span>.<span class="hljs-number">121063959839</span> <span class="hljs-number">0</span>.<span class="hljs-number">005416309877</span>
+<span class="hljs-attribute">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">006499767303</span> <span class="hljs-number">3</span>.<span class="hljs-number">446873835570</span> <span class="hljs-number">0</span>.<span class="hljs-number">154210524971</span>
+<span class="hljs-attribute">1</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">004982995987</span> <span class="hljs-number">4</span>.<span class="hljs-number">488481686457</span> <span class="hljs-number">0</span>.<span class="hljs-number">200811271375</span>
+<span class="hljs-attribute">5</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>.<span class="hljs-number">583937597275</span> <span class="hljs-number">0</span>.<span class="hljs-number">191397754793</span> <span class="hljs-number">0</span>.<span class="hljs-number">008562990598</span>
+<span class="hljs-attribute">5</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">027215051651</span> <span class="hljs-number">4</span>.<span class="hljs-number">111342559982</span> <span class="hljs-number">0</span>.<span class="hljs-number">183938352477</span>
+<span class="hljs-attribute">5</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">022680616379</span> <span class="hljs-number">4</span>.<span class="hljs-number">928769488042</span> <span class="hljs-number">0</span>.<span class="hljs-number">220509414174</span>
+<span class="hljs-attribute">10</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>.<span class="hljs-number">089886617660</span> <span class="hljs-number">0</span>.<span class="hljs-number">205089977209</span> <span class="hljs-number">0</span>.<span class="hljs-number">009175570259</span>
+<span class="hljs-attribute">10</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">053059864044</span> <span class="hljs-number">4</span>.<span class="hljs-number">215309893795</span> <span class="hljs-number">0</span>.<span class="hljs-number">188589772254</span>
+<span class="hljs-attribute">10</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">045818138123</span> <span class="hljs-number">4</span>.<span class="hljs-number">881081848937</span> <span class="hljs-number">0</span>.<span class="hljs-number">218375905316</span>
+<span class="hljs-attribute">50</span> <span class="hljs-number">1</span> <span class="hljs-number">5</span>.<span class="hljs-number">189038324356</span> <span class="hljs-number">0</span>.<span class="hljs-number">215375546648</span> <span class="hljs-number">0</span>.<span class="hljs-number">009635738846</span>
+<span class="hljs-attribute">50</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">263823032379</span> <span class="hljs-number">4</span>.<span class="hljs-number">241069884242</span> <span class="hljs-number">0</span>.<span class="hljs-number">189742254717</span>
+<span class="hljs-attribute">50</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">224498176575</span> <span class="hljs-number">4</span>.<span class="hljs-number">981047836012</span> <span class="hljs-number">0</span>.<span class="hljs-number">222848307869</span>
+<span class="hljs-attribute">100</span> <span class="hljs-number">1</span> <span class="hljs-number">10</span>.<span class="hljs-number">256094980240</span> <span class="hljs-number">0</span>.<span class="hljs-number">217939277206</span> <span class="hljs-number">0</span>.<span class="hljs-number">009750438209</span>
+<span class="hljs-attribute">100</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span>.<span class="hljs-number">495988655090</span> <span class="hljs-number">4</span>.<span class="hljs-number">510801891350</span> <span class="hljs-number">0</span>.<span class="hljs-number">201809860439</span>
+<span class="hljs-attribute">100</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>.<span class="hljs-number">434904384613</span> <span class="hljs-number">5</span>.<span class="hljs-number">139927252743</span> <span class="hljs-number">0</span>.<span class="hljs-number">229956452649</span>
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+1 1 0.184779071808 0.121063959839 0.005416309877
+1 2 0.006499767303 3.446873835570 0.154210524971
+1 3 0.004982995987 4.488481686457 0.200811271375
+5 1 0.583937597275 0.191397754793 0.008562990598
+5 2 0.027215051651 4.111342559982 0.183938352477
+5 3 0.022680616379 4.928769488042 0.220509414174
+10 1 1.089886617660 0.205089977209 0.009175570259
+10 2 0.053059864044 4.215309893795 0.188589772254
+10 3 0.045818138123 4.881081848937 0.218375905316
+50 1 5.189038324356 0.215375546648 0.009635738846
+50 2 0.263823032379 4.241069884242 0.189742254717
+50 3 0.224498176575 4.981047836012 0.222848307869
+100 1 10.256094980240 0.217939277206 0.009750438209
+100 2 0.495988655090 4.510801891350 0.201809860439
+100 3 0.434904384613 5.139927252743 0.229956452649" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><h3 id="q4-analysis" tabindex="-1" id="q4-analysis">Q4 Analysis</h3>
+<p>Note, the trials here are the arithmetic averages of the time taken in 5 trials for each configuration.</p>
+<blockquote>
+<p>The figure is here for non-unified memory version for the three scenarios for the GPU implementaiton: using one block with one thread (orange), using one block with 256 threads (green), and using multiple blocks with 256 threads each (red).
+<img src="file:////home/fabg/ColumbiaCourses/HPML_autumn25/pset3/PartB/q4_without_unified.jpg" alt="Q4 without unified" width="500"/>
+We see that for both the sole CPU and CPU + GPU, as K increases, the  time taken for addition increases, which makes sense. The slowest is the one block with one thread (orange), which is expected since it cannot really use the parallelism of the GPU.  The one block with 256 threads (green) is better, decreasing by around 2 order of magnitude. This is comparable to the CPU only implementation in blue, which might hint at the overhead of data transfer between host and device when we use one block with 256 threads. The best performance is achieved when we use multiple blocks with 256 threads each (red). This uses the full parallelism of the GPU and is by far the faster with an order of magnitude improvement over the one block with 256 threads (green) and CPU.</p>
+</blockquote>
+<blockquote>
+<p>While here are the figures for unified memory version:
+<img src="file:////home/fabg/ColumbiaCourses/HPML_autumn25/pset3/PartB/q4_with_unified.jpg" alt="Q4 with unified" width="500"/>
+This one is a little tricky. The scaling as function of K is still the same. And the trend amongst the GPU setups are still consistent with the non-unified memory version: one block with one thread (orange) is the slowest, one block with 256 threads (green) is better, and multiple blocks with 256 threads each (red) is the best. However, CPU appears teh fastest here, which is counter-intuitive.</p>
+</blockquote>
+<blockquote>
+<p>However, we are told in the Lecture 6 that harware automatically manages data movement between different memory leveles in unified memory and that UVM is primarily about ease of programming. That is, it is not primarily a &quot;technique to make well written CUDA codes run faster&quot; nad that &quot;it can't do better than epxertly written manual data movement; in most cases it can be harder to achiev expected concurrnecy behavior&quot;. In a simple case such as vector addition, it is possible that the overhead of UVM management outweighs the benefits of GPU parallelism.</p>
+</blockquote>
+<h2 id="part-c%3A-convolution-in-cuda" tabindex="-1" id="part-c-convolution-in-cuda">Part-C: Convolution in CUDA</h2>
+<p>The code for Part C is in the <code class="hljs">PartC/</code> directory.</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs"> <span class="hljs-attribute">4</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107  <span class="hljs-number">2901</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">02</span>:<span class="hljs-number">01</span> hw3_c4.ipynb
+ <span class="hljs-attribute">4</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107   <span class="hljs-number">522</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">02</span>:<span class="hljs-number">50</span> timer.h
+ <span class="hljs-attribute">4</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107  <span class="hljs-number">1253</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">02</span>:<span class="hljs-number">50</span> timer.cu
+ <span class="hljs-attribute">8</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107  <span class="hljs-number">6339</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">02</span> c1.cu
+ <span class="hljs-attribute">8</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107  <span class="hljs-number">7568</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">25</span> c2.cu
+<span class="hljs-attribute">12</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107  <span class="hljs-number">8772</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">25</span> c3.cu
+ <span class="hljs-attribute">4</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107   <span class="hljs-number">597</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">26</span> Makefile
+<span class="hljs-attribute">28</span> -rwxr-xr-x <span class="hljs-number">1</span> fbg2107 fbg2107 <span class="hljs-number">27472</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">26</span> c1
+<span class="hljs-attribute">32</span> -rwxr-xr-x <span class="hljs-number">1</span> fbg2107 fbg2107 <span class="hljs-number">31584</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">26</span> c2
+<span class="hljs-attribute">24</span> -rwxr-xr-x <span class="hljs-number">1</span> fbg2107 fbg2107 <span class="hljs-number">23992</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">26</span> c3
+ <span class="hljs-attribute">4</span> -rwxr-xr-x <span class="hljs-number">1</span> fbg2107 fbg2107    <span class="hljs-number">54</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">29</span> partc.sh
+ <span class="hljs-attribute">4</span> -rw-r--r-- <span class="hljs-number">1</span> fbg2107 fbg2107  <span class="hljs-number">1126</span> Nov <span class="hljs-number">22</span> <span class="hljs-number">05</span>:<span class="hljs-number">29</span> STDOUT
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="4 -rw-r--r-- 1 fbg2107 fbg2107  2901 Nov 22 02:01 hw3_c4.ipynb
+ 4 -rw-r--r-- 1 fbg2107 fbg2107   522 Nov 22 02:50 timer.h
+ 4 -rw-r--r-- 1 fbg2107 fbg2107  1253 Nov 22 02:50 timer.cu
+ 8 -rw-r--r-- 1 fbg2107 fbg2107  6339 Nov 22 05:02 c1.cu
+ 8 -rw-r--r-- 1 fbg2107 fbg2107  7568 Nov 22 05:25 c2.cu
+12 -rw-r--r-- 1 fbg2107 fbg2107  8772 Nov 22 05:25 c3.cu
+ 4 -rw-r--r-- 1 fbg2107 fbg2107   597 Nov 22 05:26 Makefile
+28 -rwxr-xr-x 1 fbg2107 fbg2107 27472 Nov 22 05:26 c1
+32 -rwxr-xr-x 1 fbg2107 fbg2107 31584 Nov 22 05:26 c2
+24 -rwxr-xr-x 1 fbg2107 fbg2107 23992 Nov 22 05:26 c3
+ 4 -rwxr-xr-x 1 fbg2107 fbg2107    54 Nov 22 05:29 partc.sh
+ 4 -rw-r--r-- 1 fbg2107 fbg2107  1126 Nov 22 05:29 STDOUT" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><p>the output of all three scripts is piped into <code class="hljs"><span class="hljs-attribute">STDOUT</span></code> for easy reference.</p>
+<p>run <code class="hljs"> partc.<span class="hljs-keyword">sh</span></code> to run all three parts in sequence.</p>
+<h3 id="c1%3A-simple-convolution" tabindex="-1" id="c1-simple-convolution">C1: Simple convolution</h3>
+<p>This is the barebones implementation-- we don't tile anything. The outline of the code (also in <code class="hljs"><span class="hljs-keyword">c</span><span class="hljs-number">1</span>.cu</code>)</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">brief outline <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span>
+we are told that we are implemneting <span class="hljs-keyword">a</span> <span class="hljs-number">2</span>D convolution <span class="hljs-keyword">with</span> multiple input channels
+breif recall
+
+input tensor I <span class="hljs-keyword">with</span> dimension:
+- C = <span class="hljs-number">3</span>
+- H = <span class="hljs-number">1024</span>
+- W = <span class="hljs-number">1024</span>
+so <span class="hljs-keyword">the</span> total <span class="hljs-keyword">element</span> is: <span class="hljs-number">3</span> x <span class="hljs-number">1024</span> x <span class="hljs-number">1024</span> = <span class="hljs-number">3145728</span>
+
+<span class="hljs-keyword">a</span> <span class="hljs-built_in">set</span> <span class="hljs-keyword">of</span> filters:
+F[K, C, FH, FW]
+- K = <span class="hljs-number">64</span>    filters
+- C = <span class="hljs-number">3</span>     channels
+- FH = <span class="hljs-number">3</span>    <span class="hljs-built_in">filter</span> height
+- FW = <span class="hljs-number">3</span>    <span class="hljs-built_in">filter</span> widht
+total elements: <span class="hljs-number">64</span> × <span class="hljs-number">3</span> × <span class="hljs-number">3</span> × <span class="hljs-number">3</span> = <span class="hljs-number">1728</span>
+
+<span class="hljs-keyword">the</span> outputL
+O[K, H, W]
+K = <span class="hljs-number">64</span>      output channels
+H = <span class="hljs-number">1024</span>    height
+W = <span class="hljs-number">1024</span>    widht
+
+<span class="hljs-keyword">the</span> pseudocode is something  like
+O[k,x,y] = <span class="hljs-built_in">sum</span> over c=<span class="hljs-number">0.</span>.C<span class="hljs-number">-1</span>
+           <span class="hljs-built_in">sum</span> over j=<span class="hljs-number">0.</span>.FH<span class="hljs-number">-1</span>
+           <span class="hljs-built_in">sum</span> over i=<span class="hljs-number">0.</span>.FW<span class="hljs-number">-1</span>
+           F[k,c,FW<span class="hljs-number">-1</span>-i,FH<span class="hljs-number">-1</span>-j] * I0[c,x+i,y+j]
+
+where I0 is <span class="hljs-keyword">the</span> padded input tensor, extending <span class="hljs-keyword">it</span> <span class="hljs-built_in">to</span>
+I0[C, H+<span class="hljs-number">2</span>*P, W+<span class="hljs-number">2</span>*P]
+P = <span class="hljs-number">1</span> is <span class="hljs-keyword">the</span> padding size
+so that <span class="hljs-keyword">the</span> output tensor has <span class="hljs-keyword">the</span> same height <span class="hljs-keyword">and</span> width <span class="hljs-keyword">as</span> <span class="hljs-keyword">the</span> input tensor
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="brief outline of the
+we are told that we are implemneting a 2D convolution with multiple input channels
+breif recall
+
+input tensor I with dimension:
+- C = 3
+- H = 1024
+- W = 1024
+so the total element is: 3 x 1024 x 1024 = 3145728
+
+a set of filters:
+F[K, C, FH, FW]
+- K = 64    filters
+- C = 3     channels
+- FH = 3    filter height
+- FW = 3    filter widht
+total elements: 64 × 3 × 3 × 3 = 1728
+
+the outputL
+O[K, H, W]
+K = 64      output channels
+H = 1024    height
+W = 1024    widht
+
+the pseudocode is something  like
+O[k,x,y] = sum over c=0..C-1
+           sum over j=0..FH-1
+           sum over i=0..FW-1
+           F[k,c,FW-1-i,FH-1-j] * I0[c,x+i,y+j]
+
+where I0 is the padded input tensor, extending it to
+I0[C, H+2*P, W+2*P]
+P = 1 is the padding size
+so that the output tensor has the same height and width as the input tensor" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><p>the output of running <code class="hljs">./<span class="hljs-built_in">c1</span></code> is in <code class="hljs"><span class="hljs-attribute">STDOUT</span></code>, and the relevant section is</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">convolution Configuration:
+  I:  [<span class="hljs-attribute">C</span>=3, <span class="hljs-attribute">H</span>=1024, <span class="hljs-attribute">W</span>=1024] -&gt; Padded: [3, 1026, 1026]
+  F: [<span class="hljs-attribute">K</span>=64, <span class="hljs-attribute">C</span>=3, <span class="hljs-attribute">FH</span>=3, <span class="hljs-attribute">FW</span>=3]
+  O: [<span class="hljs-attribute">K</span>=64, <span class="hljs-attribute">H</span>=1024, <span class="hljs-attribute">W</span>=1024]
+initializing padded input tensor<span class="hljs-built_in">..</span>.
+initializing filters<span class="hljs-built_in">..</span>.
+copying data <span class="hljs-keyword">to</span> device<span class="hljs-built_in">..</span>.
+kernel configuration: grid(64, 64, 64), block(16, 16, 1)
+running convolution kernel<span class="hljs-built_in">..</span>.
+122756344698240.000000, 26.471 [ms]
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="convolution Configuration:
+  I:  [C=3, H=1024, W=1024] -&gt; Padded: [3, 1026, 1026]
+  F: [K=64, C=3, FH=3, FW=3]
+  O: [K=64, H=1024, W=1024]
+initializing padded input tensor...
+initializing filters...
+copying data to device...
+kernel configuration: grid(64, 64, 64), block(16, 16, 1)
+running convolution kernel...
+122756344698240.000000, 26.471 [ms]" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><h3 id="c2%3A-tiled-convulution" tabindex="-1" id="c2-tiled-convulution">C2: tiled convulution</h3>
+<p>This is the tiled implementation-- tiling to optimize performance</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">tiled Convolution :
+  I:  [<span class="hljs-attribute">C</span>=3, <span class="hljs-attribute">H</span>=1024, <span class="hljs-attribute">W</span>=1024] -&gt; Padded: [3, 1026, 1026]
+  F: [<span class="hljs-attribute">K</span>=64, <span class="hljs-attribute">C</span>=3, <span class="hljs-attribute">FH</span>=3, <span class="hljs-attribute">FW</span>=3]
+  O: [<span class="hljs-attribute">K</span>=64, <span class="hljs-attribute">H</span>=1024, <span class="hljs-attribute">W</span>=1024]
+  chosen tile size: 16x16
+Initializing padded input tensor<span class="hljs-built_in">..</span>.
+Initializing filters<span class="hljs-built_in">..</span>.
+Copying data <span class="hljs-keyword">to</span> device<span class="hljs-built_in">..</span>.
+Kernel configuration: grid(64, 64, 64), block(16, 16, 1)
+Shared memory per block: 7.59 KB
+Running tiled convolution kernel<span class="hljs-built_in">..</span>.
+122756344698240.000000, 26.789 [ms]
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="tiled Convolution :
+  I:  [C=3, H=1024, W=1024] -&gt; Padded: [3, 1026, 1026]
+  F: [K=64, C=3, FH=3, FW=3]
+  O: [K=64, H=1024, W=1024]
+  chosen tile size: 16x16
+Initializing padded input tensor...
+Initializing filters...
+Copying data to device...
+Kernel configuration: grid(64, 64, 64), block(16, 16, 1)
+Shared memory per block: 7.59 KB
+Running tiled convolution kernel...
+122756344698240.000000, 26.789 [ms]" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><h3 id="c3%3A-cudnn-convolution" tabindex="-1" id="c3-cudnn-convolution">C3: cuDNN convolution</h3>
+<p>The output of this implementation is in <code class="hljs"><span class="hljs-attribute">STDOUT</span></code>, and the relevant section is</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs">cuDNN Convolution:
+  I:  [<span class="hljs-attribute">N</span>=1, <span class="hljs-attribute">C</span>=3, <span class="hljs-attribute">H</span>=1024, <span class="hljs-attribute">W</span>=1024]
+  F: [<span class="hljs-attribute">K</span>=64, <span class="hljs-attribute">C</span>=3, <span class="hljs-attribute">FH</span>=3, <span class="hljs-attribute">FW</span>=3]
+  O: [<span class="hljs-attribute">N</span>=1, <span class="hljs-attribute">K</span>=64, <span class="hljs-attribute">H</span>=1024, <span class="hljs-attribute">W</span>=1024]
+  padding: 1
+initializing input tensor<span class="hljs-built_in">..</span>.
+Initializing filters<span class="hljs-built_in">..</span>.
+Copying data <span class="hljs-keyword">to</span> device<span class="hljs-built_in">..</span>.
+finding fastest convolution algorithm<span class="hljs-built_in">..</span>.
+selected algorithm: 2
+expected time <span class="hljs-keyword">from</span> warmup: 38.740 ms
+running cuDNN convolution<span class="hljs-built_in">..</span>.
+FINAL: 122756344698240.000000, 38.457 [ms]
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="cuDNN Convolution:
+  I:  [N=1, C=3, H=1024, W=1024]
+  F: [K=64, C=3, FH=3, FW=3]
+  O: [N=1, K=64, H=1024, W=1024]
+  padding: 1
+initializing input tensor...
+Initializing filters...
+Copying data to device...
+finding fastest convolution algorithm...
+selected algorithm: 2
+expected time from warmup: 38.740 ms
+running cuDNN convolution...
+FINAL: 122756344698240.000000, 38.457 [ms]" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><p>This part was done with the help of the cuDNN documentation and examples from ed.</p>
+<p>So in short, the program outputs are:</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+              <pre><code class="hljs"><span class="hljs-attribute">122756344698240</span>.<span class="hljs-number">000000</span>, <span class="hljs-number">26</span>.<span class="hljs-number">471</span><span class="hljs-meta"> [ms]</span>
+<span class="hljs-attribute">122756344698240</span>.<span class="hljs-number">000000</span>, <span class="hljs-number">26</span>.<span class="hljs-number">789</span><span class="hljs-meta"> [ms]</span>
+<span class="hljs-attribute">122756344698240</span>.<span class="hljs-number">000000</span>, <span class="hljs-number">38</span>.<span class="hljs-number">457</span><span class="hljs-meta"> [ms]</span>
+</code></pre>
+
+              <div class="zeroclipboard-container position-absolute right-0 top-0">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton clipboard-copy m-2 p-0 tooltipped-no-delay"
+                  value="122756344698240.000000, 26.471 [ms]
+122756344698240.000000, 26.789 [ms]
+122756344698240.000000, 38.457 [ms]" tabindex="0" role="button">
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-copy clipboard-copy-icon m-2">
+                    <path
+                      d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                      d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                    class="octicon octicon-check clipboard-check-icon color-fg-success d-none m-2">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                  </svg>
+                </clipboard-copy>
+              </div>
+            </div><blockquote>
+<p>Some commenatry on the performance of the three implementations. The tiling vs naive is suprising in that we expect tiling to be faster. This speed up might not materialize, for example. since we have a small 3x3 filter size and also the caches might effectively handle the memory access pattern well enough in this case of small convolutions and the shared memory overhead might not be worth it for indexing and __syncthreads. Now for using cuDNN. One is because cuDNN uses double precision by default, which slows things down. Also, the algorithmn selection might not be optimal for this specific case. CuDNN is designed to be a general-purpose library and, like in the last question, in the unified memory case, the overhead of generality due to ease of use might outweigh the benefits in this specific case.</p>
+</blockquote>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
