@@ -1,6 +1,7 @@
 /*
 q3.cu
 Q3: CUDA Unified Memory vector addition with K million elements
+taken from HPML lecture 6
 */
 
 #include <stdio.h>
@@ -33,7 +34,9 @@ __global__ void AddVectors(const double *A, const double *B, double *C, int elem
     }
 }
 
-/*function to run and time a specific scenario*/
+/*
+function to run and time a specific scenario
+*/
 double run_scenario_unified(int scenario, double *A, double *B, double *C, int N)
 {
     // reset and start timer

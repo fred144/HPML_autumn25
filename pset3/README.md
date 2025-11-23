@@ -219,10 +219,12 @@ drwxr-xr-x 2 fbg2107 fbg2107  4096 Nov 21 23:53 results
 In addition to what was asked we also wrote scripts to automate 
 `q1_trials_script.sh`, `q2_trials_script.sh`, `q3_trials_script.sh` to run multiple trials for different values of K (size of vectors in millions) and save the results to text files in `results/` directory.
 
+Finally, this data is post processed and whatnot for averages as well as plotted for Q4  and is done in `q4.py`.
+
 ### Q1 
 Here are the average results for Q1:
 ```
-# K avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+K avg_time(s) avg_BW(GB/s) avg_GFLOP/s
 1 0.002086210251 5.465577734215 0.489051617129
 5 0.009333992004 5.993899830868 0.536325078106
 10 0.019168758392 5.830758696457 0.521727456503
@@ -233,7 +235,7 @@ Here are the average results for Q1:
 ### Q2 nonUnified Memory version
 Here are the average results for Q2 (non-unified memory version):
 ```
-# K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
 1 1 0.200423622131 0.111603769348 0.004993068119
 1 2 0.002782583237 8.032750351288 0.359379167247
 1 3 0.000149345398 149.739823709605 6.699246309808
@@ -254,7 +256,7 @@ Here are the average results for Q2 (non-unified memory version):
 ### Q3 Unified Memory version
 also stored in the directory `results/` are the average results for Q3 (unified memory version):
 ```
-# K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
+K Scenario avg_time(s) avg_BW(GB/s) avg_GFLOP/s
 1 1 0.184779071808 0.121063959839 0.005416309877
 1 2 0.006499767303 3.446873835570 0.154210524971
 1 3 0.004982995987 4.488481686457 0.200811271375
@@ -273,11 +275,138 @@ also stored in the directory `results/` are the average results for Q3 (unified 
 ```
 
 ### Q4 Analysis 
-The figures are here for non-unified memory version:
-![Q4_without_unified](./PartB/q4_without_unified.jpg)
-We see that for both versions, as K increases, the  time taken for addition increases, which makes sense.
+
+Note, the trials here are the arithmetic averages of the time taken in 5 trials for each configuration.
+
+>The figure is here for non-unified memory version for the three scenarios for the GPU implementaiton: using one block with one thread (orange), using one block with 256 threads (green), and using multiple blocks with 256 threads each (red).
+>![Q4_without_unified](./PartB/q4_without_unified.jpg)
+> We see that for both the sole CPU and CPU + GPU, as K increases, the  time taken for addition increases, which makes sense. The slowest is the one block with one thread (orange), which is expected since it cannot really use the parallelism of the GPU.  The one block with 256 threads (green) is better, decreasing by around 2 order of magnitude. This is comparable to the CPU only implementation in blue, which might hint at the overhead of data transfer between host and device when we use one block with 256 threads. The best performance is achieved when we use multiple blocks with 256 threads each (red). This uses the full parallelism of the GPU and is by far the faster with an order of magnitude improvement over the one block with 256 threads (green) and CPU.
 
 
-while here are the figures for unified memory version:
+>While here are the figures for unified memory version:
 ![Q4_with_unified](./PartB/q4_with_unified.jpg)
+>This one is a little tricky. The scaling as function of K is still the same. And the trend amongst the GPU setups are still consistent with the non-unified memory version: one block with one thread (orange) is the slowest, one block with 256 threads (green) is better, and multiple blocks with 256 threads each (red) is the best. However, CPU appears teh fastest here, which is counter-intuitive. 
 
+> However, we are told in the Lecture 6 that harware automatically manages data movement between different memory leveles in unified memory and that UVM is primarily about ease of programming. That is, it is not primarily a "technique to make well written CUDA codes run faster" nad that "it can't do better than epxertly written manual data movement; in most cases it can be harder to achiev expected concurrnecy behavior". In a simple case such as vector addition, it is possible that the overhead of UVM management outweighs the benefits of GPU parallelism.
+
+
+## Part-C: Convolution in CUDA
+
+The code for Part C is in the `PartC/` directory.
+
+```
+ 4 -rw-r--r-- 1 fbg2107 fbg2107  2901 Nov 22 02:01 hw3_c4.ipynb
+ 4 -rw-r--r-- 1 fbg2107 fbg2107   522 Nov 22 02:50 timer.h
+ 4 -rw-r--r-- 1 fbg2107 fbg2107  1253 Nov 22 02:50 timer.cu
+ 8 -rw-r--r-- 1 fbg2107 fbg2107  6339 Nov 22 05:02 c1.cu
+ 8 -rw-r--r-- 1 fbg2107 fbg2107  7568 Nov 22 05:25 c2.cu
+12 -rw-r--r-- 1 fbg2107 fbg2107  8772 Nov 22 05:25 c3.cu
+ 4 -rw-r--r-- 1 fbg2107 fbg2107   597 Nov 22 05:26 Makefile
+28 -rwxr-xr-x 1 fbg2107 fbg2107 27472 Nov 22 05:26 c1
+32 -rwxr-xr-x 1 fbg2107 fbg2107 31584 Nov 22 05:26 c2
+24 -rwxr-xr-x 1 fbg2107 fbg2107 23992 Nov 22 05:26 c3
+ 4 -rwxr-xr-x 1 fbg2107 fbg2107    54 Nov 22 05:29 partc.sh
+ 4 -rw-r--r-- 1 fbg2107 fbg2107  1126 Nov 22 05:29 STDOUT
+```
+the output of all three scripts is piped into `STDOUT` for easy reference.
+
+run ` partc.sh` to run all three parts in sequence.
+
+### C1: Simple convolution 
+This is the barebones implementation-- we don't tile anything. The outline of the code (also in `c1.cu`)
+```
+brief outline of the
+we are told that we are implemneting a 2D convolution with multiple input channels
+breif recall
+
+input tensor I with dimension:
+- C = 3
+- H = 1024
+- W = 1024
+so the total element is: 3 x 1024 x 1024 = 3145728
+
+a set of filters:
+F[K, C, FH, FW]
+- K = 64    filters
+- C = 3     channels
+- FH = 3    filter height
+- FW = 3    filter widht
+total elements: 64 × 3 × 3 × 3 = 1728
+
+the outputL
+O[K, H, W]
+K = 64      output channels
+H = 1024    height
+W = 1024    widht
+
+the pseudocode is something  like
+O[k,x,y] = sum over c=0..C-1
+           sum over j=0..FH-1
+           sum over i=0..FW-1
+           F[k,c,FW-1-i,FH-1-j] * I0[c,x+i,y+j]
+
+where I0 is the padded input tensor, extending it to
+I0[C, H+2*P, W+2*P]
+P = 1 is the padding size
+so that the output tensor has the same height and width as the input tensor
+```
+
+the output of running `./c1` is in `STDOUT`, and the relevant section is
+```
+convolution Configuration:
+  I:  [C=3, H=1024, W=1024] -> Padded: [3, 1026, 1026]
+  F: [K=64, C=3, FH=3, FW=3]
+  O: [K=64, H=1024, W=1024]
+initializing padded input tensor...
+initializing filters...
+copying data to device...
+kernel configuration: grid(64, 64, 64), block(16, 16, 1)
+running convolution kernel...
+122756344698240.000000, 26.471 [ms]
+```
+
+
+### C2: tiled convulution 
+This is the tiled implementation-- tiling to optimize performance
+```
+tiled Convolution :
+  I:  [C=3, H=1024, W=1024] -> Padded: [3, 1026, 1026]
+  F: [K=64, C=3, FH=3, FW=3]
+  O: [K=64, H=1024, W=1024]
+  chosen tile size: 16x16
+Initializing padded input tensor...
+Initializing filters...
+Copying data to device...
+Kernel configuration: grid(64, 64, 64), block(16, 16, 1)
+Shared memory per block: 7.59 KB
+Running tiled convolution kernel...
+122756344698240.000000, 26.789 [ms]
+```
+
+### C3: cuDNN convolution
+The output of this implementation is in `STDOUT`, and the relevant section is
+```
+cuDNN Convolution:
+  I:  [N=1, C=3, H=1024, W=1024]
+  F: [K=64, C=3, FH=3, FW=3]
+  O: [N=1, K=64, H=1024, W=1024]
+  padding: 1
+initializing input tensor...
+Initializing filters...
+Copying data to device...
+finding fastest convolution algorithm...
+selected algorithm: 2
+expected time from warmup: 38.740 ms
+running cuDNN convolution...
+FINAL: 122756344698240.000000, 38.457 [ms]
+```
+This part was done with the help of the cuDNN documentation and examples from ed. 
+
+So in short, the program outputs are: 
+```
+122756344698240.000000, 26.471 [ms]
+122756344698240.000000, 26.789 [ms]
+122756344698240.000000, 38.457 [ms]
+```
+
+> Some commenatry on the performance of the three implementations. The tiling vs naive is suprising in that we expect tiling to be faster. This speed up might not materialize, for example. since we have a small 3x3 filter size and also the caches might effectively handle the memory access pattern well enough in this case of small convolutions and the shared memory overhead might not be worth it for indexing and __syncthreads. Now for using cuDNN. One is because cuDNN uses double precision by default, which slows things down. Also, the algorithmn selection might not be optimal for this specific case. CuDNN is designed to be a general-purpose library and, like in the last question, in the unified memory case, the overhead of generality due to ease of use might outweigh the benefits in this specific case.

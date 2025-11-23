@@ -1,5 +1,5 @@
 /*
-q2.cu - DEBUG VERSION WITH FIXED KERNEL
+q2.cu
 Q2: CUDA vector addition with explicit memory management
 */
 
@@ -32,7 +32,9 @@ __global__ void AddVectors(const double *A, const double *B, double *C, int elem
     }
 }
 
-/*function to run and time a specific scenario*/
+/*
+function to run and time a specific scenario
+*/
 double run_scenario(int scenario, double *h_A, double *h_B, double *h_C, int N)
 {
     double *d_A, *d_B, *d_C;

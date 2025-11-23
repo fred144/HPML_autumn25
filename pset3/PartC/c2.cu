@@ -127,7 +127,7 @@ int main()
     size_t filter_size = K * C * FH * FW * sizeof(double);
     size_t output_size = K * H * W * sizeof(double);
 
-    printf("Tiled Convolution :\n");
+    printf("tiled Convolution :\n");
     printf("  I:  [C=%d, H=%d, W=%d] -> Padded: [%d, %d, %d]\n",
            C, H, W, C, H + 2*P, W + 2*P);
     printf("  F: [K=%d, C=%d, FH=%d, FW=%d]\n", K, C, FH, FW);
@@ -224,7 +224,7 @@ int main()
     }
 
     // Print results in required format
-    printf("%.6f,%.3f\n", checksum, execution_time_ms);
+    printf("%.6f, %.3f [ms]\n", checksum, execution_time_ms);
 
     // Cleanup
     cudaFree(d_I);
